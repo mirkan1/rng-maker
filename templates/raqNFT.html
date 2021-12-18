@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
+<link type="text/css" rel="stylesheet" id="dark-mode-general-link">
+<style lang="en" type="text/css" id="dark-mode-custom-style"></style>
+<style lang="en" type="text/css" id="dark-mode-native-style"></style>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Solana Drink_files/style.css') }}">
+    <link href="{{ url_for('static', filename='Solana Drink_files/css2" rel="stylesheet') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Solana Drink_files/all.min.css') }}" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="{{ url_for('static', filename='css/all.css') }}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/florin.css')}}">
+    <title>RNG-MAKER</title>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1041.0" data-gr-ext-installed="" cz-shortcut-listen="true" onload="INITIALIZE()">
+    <header style="z-index: 1000000000;">
+        <div class="logo">
+            <h3 style="
+                font-family: 'Ubuntu';
+                font-size: 27px;
+                text-align: -webkit-center;
+                margin-bottom: 10px;
+            ">raq</h3>
+            <img src="https://www.cmkportal.com/static/icons/carbon13.png" alt="logo">
+        </div>
+        <ul>
+            <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#roadmap"><i class="fas fa-map-pin"></i> Roadmap</a></li>
+            <li><a href="#" class="account_info" onclick="checkIfWalletIsConnected()"><i class="fa-solid fa-wallet"></i> Connect</a></li>
+        </ul>
+        <div class="burger"><i class="fas fa-bars"></i></div>
+    </header>
+    <div class="slide-menu" style="left: -100%; padding-top:10%">
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="#roadmap"><i class="fas fa-map-pin"></i> Roadmap</a>
+        <a href="#" class="account_info" onclick="checkIfWalletIsConnected()"><i class="fa-solid fa-wallet"></i> Connect</a>
+    </div>
+    <div id="home">
+        <div class="intro">
+            <h2>raqnft<i class="fa-solid fa-monkey"></i></h2>
+            <p>raqNFT is an NFT Contract. 2000 token cap</p>
+            <p>Create an NFT with your inputs: name input(visible in the NFT), 3 color integer inputs of(Red, Blue, Green), text size int, description input is limited to 200 character long.</p>
+            <p>Send it to your wallet get Opensea link and transaction history as proof of work.</p>
+            <div class="socmed">
+                <a href="https://twitter.com/mirkanofmirkan" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://discord.gg/XtCGWfw" target="_blank"><i class="fab fa-discord"></i></a>
+                <a href="https://opensea.io/rng-maker" target="_blank">OPENSEA</a>
+                <!-- <a><img src="{{ url_for('static', filename='img/opensea.png') }}" width="27px" height="27px"></a> -->
+                <!-- <a href="https://telegram.com/#"><i class="fab fa-telegram"></i></a> -->
+<!--                 <a href="https://telegram.com/#"><i class="fab fa-telegram"></i></a>
+                 -->
+            </div>
+<!--             <div class="partner">
+                <p>See us on:</p>
+                <a href="https://nftcalendar.io/event/raq-nft/" target="_blank"><img src="{{ url_for('static', filename='img/nftcalendar.png') }}" alt="nft-calendar"></a>
+            </div> -->
+        </div>
+        <div style="display: flex; flex-direction: column;">
+            <div class="nft-shill" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); will-change: transform;">
+                <img src="{{ url_for('static', filename='gif/random_art.gif')}}" alt="drinks-nft">
+            </div>
+        </div>
+    </div>
+    <!-- <img id="image" width="fit-content" height="fit-content" src="{{ url_for('static', filename='img/nftcalendar.png') }}"> -->
+    <!-- <object data="localhost:3000/img/nftcalendar.png" width="300" height="300"> </object> -->
+    <div style="
+        background: #E6CCA9;
+        background-image:
+        linear-gradient(#E6CCA9, #f5d689);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    ">
+        <div style="background: black; width:100%; min-height: 150px; padding:2%; border-style: solid; border-color: white;border-radius: 30px 30px 30px 30px;box-shadow: 2px 2px 8px 2px #102533;background-color: #102533;">
+            <div style="display: flex;flex-direction: row-reverse;">
+                <a onclick="consoleState(event)" id="min_max_button" style="cursor: pointer;">❌</a>
+                <a onclick="consoleState(event)" id="min_max_button" style="cursor: pointer;">🔲</a>
+                <a onclick="consoleState(event)" id="min_max_button" style="cursor: pointer;">➖</a>
+            </div>
+            <p id="info" style="color: white"><span style="font-size: 20px; color: seagreen;">CONSOLE</span><br></p>
+        </div>
+        <div class="container" id="container">
+            <div class="form-container sign-in-container">
+                <div id="form_user" action="javascript:RBG_CHANGE({target:{id:'all'}})" style="align-items:baseline;">
+                    <div class="flex-left-to-right">
+                        <h2>name:</h2>
+                        <input id="_name" type="text" name="name" value="" onchange="RBG_CHANGE(event)" maxlength="10" style="width:200px" value="EpicLordHamburger">
+                    </div>
+                    <div class="flex-left-to-right">
+                        <h2>R:</h2>
+                        <input id="R" type="number" name="R" value="0" onchange="RBG_CHANGE(event)" max="256" style="width:200px">
+                    </div>
+                    <div class="flex-left-to-right">
+                        <h2>B:</h2>
+                        <input id="B" type="number" name="B" value="0" onchange="RBG_CHANGE(event)" max="256" style="width:200px">
+                    </div>
+                    <div class="flex-left-to-right">
+                        <h2>G:</h2>
+                        <input id="G" type="number" name="G" value="0" onchange="RBG_CHANGE(event)" max="256" style="width:200px">
+                    </div>
+                    <div class="flex-left-to-right">
+                        <h2>size:</h2>
+                        <input id="text_size" type="number" name="text_size" value="15" onchange="RBG_CHANGE(event)" max="100" style="width:200px">
+                    </div>
+                    <div class="flex-left-to-right">
+                        <h2>desc:</h2>
+                        <input id="description" type="text" name="description" value="UNKNOWN" onchange="RBG_CHANGE(event)" max="200" style="width:200px">
+                    </div>
+                    <div style="display: flex;">                        
+                        <!-- <button class="mint-btn" style="background-color: #102533;" id="reset">RESET DESING</button> -->
+                        <!-- <input id="nameUpdateItem" type="input"><button class="mint-btn" style="background-color: #123;" id="reset" onclick="nameUpdate()">nameUpdate</button> -->
+                        <!-- <a class="mint-btn home-btns" href="#" onclick="getRGBA()"><i class="fas fa-hammer"></i> getRGBA</a> -->
+                        <button onclick="mintPredefinedNFT()" style="background-color: #102533;; margin-bottom: 5px;border: 3px solid #e6cca9;"><span style="color:#e6cca9;display:flex;"><i class="fas fa-hammer"></i>&nbsp;MINT</span></button>
+                        <button class="mint-btn" style="background-color: #102533;margin-bottom: 5px;border: 3px solid #e6cca9;" id="reset" onclick="nameUpdate(read=true)"><span style="color:#e6cca9; display:flex; "><i class="fa-solid fa-print"></i>&nbsp;PRINT</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-container" width="100%">
+                <div class="" style="display:flex;align-items: center; flex-direction: row; height:100%">
+                    <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 350 350">
+                        <style>.base { fill: white; font-family: serif; font-size: 15px; }</style>
+                        <rect width="100%" height="100%" fill="rgba(0,0,0,1)" />
+                        <text id="name_plate" x="5%" y="20%" class="base" dominant-baseline="right" text-anchor="right">EpicLordHamburger</text>
+                        <text id="description_plate" x="5%" y="40%" class="base" dominant-baseline="right" text-anchor="right">UNKNOWN</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="roadmap">
+        <div class="road">
+            <div class="road-label road-top">
+                <h3 id="pixel-modern-art">Q4 2021 - Background data cards</h3>
+            </div>
+            <div style="display:flex;flex-direction: row;gap: 50px; margin: 0 25px 25px 25px;">
+                <div style="align-items: center;
+    display: flex;">
+                <img src="#" alt="background card photo">
+                </div>
+                <p>Mint this your background data card into your ethereum wallet for 10 MATIC + GAS<br> || base64 format<br>|| Sharing same pool with MetaInfoCard, LIMIT 2000</p>
+            </div>
+            <div>
+                <button class="mint-btn" style="background-color: #102533;margin-bottom: 5px;border: 3px solid #e6cca9;" onclick="MintPixelArt()"><span style="color:#e6cca9; display:flex; "><i class="fas fa-hammer"></i>&nbsp;MINT</span></button>
+                <!-- <button class="mint-btn" style="background-color: #102533;margin-bottom: 5px;border: 3px solid #e6cca9;" onclick="getNew128px()"><span style="color:#e6cca9; display:flex; "><i class="fa-solid fa-print"></i>&nbsp;Refresh</span></button> -->
+            </div>
+        </div>
+        <div class="road">
+            <div class="road-label road-top">
+                <h3 id="pixel-modern-art">Q1 2022 - Glitches</h3>
+            </div>
+            <div style="display:flex;flex-direction: row;gap: 50px; margin: 0 25px 25px 25px;">
+                <div style="align-items: center;
+    display: flex;">
+                <canvas id="pixelitcanvas" crossorigin="anonymous" width="128px" height="128px"></canvas>
+                </div>
+                <p>Mint this Glitch into your ethereum wallet for 10 MATIC + GAS<br> || base64 format<br>|| Each project share same pool limit of above</p>
+            </div>
+            <div>
+                <button class="mint-btn" style="background-color: #102533;margin-bottom: 5px;border: 3px solid #e6cca9;" onclick="MintPixelArt()"><span style="color:#e6cca9; display:flex; "><i class="fas fa-hammer"></i>&nbsp;MINT</span></button>
+                <!-- <button class="mint-btn" style="background-color: #102533;margin-bottom: 5px;border: 3px solid #e6cca9;" onclick="getNew128px()"><span style="color:#e6cca9; display:flex; "><i class="fa-solid fa-print"></i>&nbsp;Refresh</span></button> -->
+            </div>
+        </div>
+        <div class="road">
+            <div class="road-label">
+                <h3>Q2 2022 - URimg</h3>
+            </div>
+            <p>Your image of up to 512x512 pixels, you can pixeliate it and write aout it into your data storage in blockchain or send it without attributes</p>
+            <p>Save your own image file into blockchain. probably will be limited to some pixel length: 1080px?</p>
+            <p>Token limit increated to 4000</p>
+        </div>
+        <div class="road">
+            <div class="road-label">
+                <h3>Q3 2022 - Upcoming events</h3>
+            </div>
+            <p>Special NFTs release and available on Market. Collaboration with an Exclusive Partnership.</p>
+            <p>Token limit increated to 8000</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='./Solana Drink_files/vanilla-tilt.min.js.download') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='./Solana Drink_files/script.js.download') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" type="application/javascript"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script src="{{ url_for('static', filename='js/pixelit.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js" type="application/javascript"></script>
+    <script>
+    // MAIN SCRIPT
+    const BASE_URL = `{{ BASE_URL }}`;
+    var balance, abi, web3Connected, chanId_int, account, connectedContract, provider, signer
+    var CONTRACT_ADDRESS = "0xb056f570a2Be4CDfA144a143EB52DC7EdF116519";
+    const chainIdInt = 80001;
+    const chainId = '0x'+chainIdInt.toString(16);console.log(chainId)
+    const SCAN = "https://mumbai.polygonscan.com/tx/";
+    const openSeaPrefix = "https://testnets.opensea.io/assets/mumbai/"
+    const saleNetwork = "polygon/matic";
+    const rariblePrefix = "https://rinkeby.rarible.com/token/"
+    // const cost = 
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // data:image/svg+xml;base64,               || SVG
+    // data:application/json;base64,            || JSON
+    //////////////////////////////////////////////////////////////////////////////////////////
+    var R = 0;
+    var B = 0;
+    var G = 0;
+    var text_size = "15px";
+    var description = "https://github.com/mirkan1";
+    name_array = ["PotatoLimonato", "ChicalatoDeparsiano", "lil;"];
+    var _name = name_array.filter(e => {if (Math.random() > 0.65) {return e;}})[0] || "UNKNOWN";
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // PALETTE CONFIGS
+    var px;
+    var totalPalettes = [
+      // [ '#253a38','#7aa44d','#91ea3a','#d2deca',], //acidicGB
+      // [ "#102533","#42678e","#6f9edf","#cecece",], // bluePalette 
+      // [ "#191930", "#263d6e", "#2f729e", "#eba254", "#f5d689", "#fff5d9",], // vintage voltage
+      ["#2a1e42","#2d2640","#353b4d","#4e5075","#75619c","#a184bd","#ae9cd6","#a099cc","#817dbd","#7676a3","#5f7094","#495182","#343166","#1f1f57","#421b4a","#6b2b61","#872f4f","#a82828","#d44c2a","#d9894c","#dea76d","#e8d899","#f0f5c7","#ccdbb8","#8dab89","#79947d","#708078","#4e6160","#38464d","#2c3545","#373a5e","#535280","#807594","#a2a2b0","#c3c8d6","#dfe5f5","#e5f5ff",] // CYBER-37
+        // [0,0,0],
+        // [206,126,0],
+        // [256,256,256],
+        // [106,50,159],
+        // // [204,0,0],
+        // [26,28,44],[93,39,93],[177, 62, 83],[239, 125, 87],[255, 205, 117],[167, 240, 112],[56, 183, 100],[37, 113, 121],[41, 54, 111],[59, 93, 201],[65, 166, 246],[115, 239, 247],[244, 244, 244],[148, 176, 194],[86, 108, 134],[51, 60, 87]
+    ]
+    var acidicGB = [ '#253a38','#7aa44d','#91ea3a','#d2deca',];
+    var bluePalette = [ "#102533","#42678e","#6f9edf","#cecece",];
+    //////////////////////////////////////////////////////////////////////////////////////////
+
+    const getURI = async (id) => {
+        console.log(await connectedContract.tokenURI(id))
+    }
+
+    function RBG_CHANGE(event) {
+        // var name_plate = document.querySelector("#name_plate"); 
+        // var RGB_plate = document.querySelector("#RGB_plate"); 
+        if (event.target.id == "all" || event.target.id == "R") {
+            R = parseInt(event.target.value);
+            // document.querySelector("#RGB_plate").innerHTML = `rgb(${R},${B},${G})`;
+            document.querySelector("rect").setAttribute("fill", `rgb(${R},${B},${G})`);
+        } else if (event.target.id == "all" || event.target.id == "B") {
+            B = parseInt(event.target.value);
+            // document.querySelector("#RGB_plate").innerHTML = `rgb(${R},${B},${G})`;
+            document.querySelector("rect").setAttribute("fill", `rgb(${R},${B},${G})`);
+        } else if (event.target.id == "all" || event.target.id == "G") {
+            G = parseInt(event.target.value);
+            // document.querySelector("#RGB_plate").innerHTML = `rgb(${R},${B},${G})`;
+            document.querySelector("rect").setAttribute("fill", `rgb(${R},${B},${G})`);
+
+        } else if (event.target.id == "all" || event.target.id == "_name") {
+            _name = event.target.value;
+            document.querySelector("#name_plate").innerHTML = event.target.value
+        } else if (event.target.id == "all" || event.target.id == "description") {
+            description = event.target.value;
+            document.querySelector("#description_plate").innerHTML = event.target.value
+        } else if (event.target.id == "all" || event.target.id == "text_size") {
+            document.querySelectorAll(".base").forEach(e => {
+                text_size = event.target.value + "px";
+                e.style['font-size'] = text_size;
+            });
+        }
+    }
+    //////////////////////////////////////////////////////////////////////////////////////////
+    const lengthOfStorage = async () => {
+        var len = await connectedContract.totalCount();
+        return parseInt(len);
+    }
+
+    const withdrawAdmin = async () => {
+        var contractBalance = await provider.getBalance(CONTRACT_ADDRESS);
+        contractBalance = parseInt(contractBalance._hex);
+        var cost = await connectedContract.cost(); 
+        cost = parseInt(cost._hex);
+        console.log("contractBalance", contractBalance, "cost", cost)
+        if (contractBalance > 0) {
+            await connectedContract.withdraw();
+        } else {
+            console.log("nobody is minted yet :(")
+        }
+    }
+
+    const askContractToMintNftwithInputs = async () => {
+        var _souce = document.querySelector("svg").outerHTML
+                            .replace(/[\n]/g, "")
+                            .replace(/ /g, " ");
+        var image = 'data:image/svg+xml;base64,' + 
+            btoa(
+                unescape(
+                    encodeURIComponent(
+                        _souce
+                        )
+                    )
+                );
+
+        // {
+        //   "description": "Friendly OpenSea Creature that enjoys long swims in the ocean.", 
+        //   "external_url": "https://openseacreatures.io/3", 
+        //   "image": "https://storage.googleapis.com/opensea-prod.appspot.com/puffs/3.png", 
+        //   "name": "Dave Starbelly",
+        //   "attributes": [ ... ], 
+        // }
+        var unique_id = await connectedContract.totalCount();
+        var nftData = {
+            attributes: [
+                {
+                    trait_type: "Red",
+                    value: String(R)
+                },{
+                    trait_type: "Blue",
+                    value: String(B)
+                },{
+                    trait_type: "Green",
+                    value: String(G)
+                },{
+                    trait_type: "Text Size",
+                    value: text_size
+                },{
+                    trait_type: "Name Lenght",
+                    value: _name.length
+                },{
+                    trait_type: "Description Lenght",
+                    value: description.length
+                }
+            ],
+            name: _name,
+            description: description,
+            image: image,
+            external_link: `${BASE_URL}token/${parseInt(unique_id) + 1}`
+        }
+        var b64 = btoa(unescape(encodeURIComponent(
+            JSON.stringify(nftData)
+            // `{
+            // "name": "Spongebob Cowboy Pants",
+            // "description": "A silent hero. A watchful protector.",
+            // "image": "https://i.imgur.com/v7U019j.png"
+            // }`
+        )));
+        var str = decodeURIComponent(escape(window.atob(b64)));
+        console.log(JSON.stringify(nftData), str)
+        return b64;
+    }
+    const waitAndUpdate = async (Txn, innerHTMLid) => {
+        let dotter = setInterval(() => {
+            document.querySelector(innerHTMLid).innerText += "."
+        }, 500)
+        await Txn.wait()
+        .then( async (tx) => {
+            console.log(tx)
+            // tnxLink = `https://rinkeby.etherscan.io/tx/${r.transactionHash}`;
+            var length = await lengthOfStorage()// + parseInt(1);
+            var openSeaLink = openSeaPrefix + CONTRACT_ADDRESS + "/" + length;
+            document.querySelector("#info").innerHTML = `SCAN      || Mined, see transaction:<a href="${SCAN}${tx.transactionHash}" target="blank_" style="color: cornflowerblue; font-size:20px">${SCAN}</a><br>`;
+            document.querySelector("#info").innerHTML += `Opensea   || Delayed history of metadata:<a href="${openSeaLink}" target="blank_" style="color: cornflowerblue; font-size:20px">Opensea</a><br>`;
+            document.querySelector("#info").innerHTML += `Raible    || See your NFT! on raible:<a href="${rariblePrefix}${CONTRACT_ADDRESS}/${length}" target="blank_" style="color: cornflowerblue; font-size:20px">Raible</a><br>`;
+            clearInterval(dotter);
+        })
+    }
+    const askContractToMintNft = async () => {
+        try {
+            const { ethereum } = window;
+            if (ethereum) {
+                const provider = new ethers.providers.Web3Provider(ethereum);
+                const signer = provider.getSigner();
+                connectedContract = new ethers.Contract(CONTRACT_ADDRESS, abi.abi, signer);
+                document.querySelector("#info").innerText = "Going to pop wallet now to pay gas...";
+                let overrides = {
+                    value: await connectedContract.cost()//ethers.utils.parseEther("10")
+                };
+                let nftTxn = await connectedContract.makeAnEpicNFT("ewogICAgIm5hbWUiOiAic2Vjb25kYXJ5IiwKICAgICJkZXNjcmlwdGlvbiI6ICJBIHNpbGVudCBoZXJvLiBBIHdhdGNoZnVsIHByb3RlY3Rvci4iLAogICAgImltYWdlIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaUlIQnlaWE5sY25abFFYTndaV04wVW1GMGFXODlJbmhOYVc1WlRXbHVJRzFsWlhRaUlIWnBaWGRDYjNnOUlqQWdNQ0F6TlRBZ016VXdJajRLSUNBZ0lEeHpkSGxzWlQ0dVltRnpaU0I3SUdacGJHdzZJSGRvYVhSbE95Qm1iMjUwTFdaaGJXbHNlVG9nYzJWeWFXWTdJR1p2Ym5RdGMybDZaVG9nTVRSd2VEc2dmVHd2YzNSNWJHVStDaUFnSUNBOGNtVmpkQ0IzYVdSMGFEMGlNVEF3SlNJZ2FHVnBaMmgwUFNJeE1EQWxJaUJtYVd4c1BTSmliR0ZqYXlJZ0x6NEtJQ0FnSUR4MFpYaDBJSGc5SWpVd0pTSWdlVDBpTlRBbElpQmpiR0Z6Y3owaVltRnpaU0lnWkc5dGFXNWhiblF0WW1GelpXeHBibVU5SW0xcFpHUnNaU0lnZEdWNGRDMWhibU5vYjNJOUltMXBaR1JzWlNJK1JYQnBZMHh2Y21SSVlXMWlkWEpuWlhJOEwzUmxlSFErQ2p3dmMzWm5QZz09Igp9", overrides=overrides);
+                await waitAndUpdate(nftTxn, "#info");
+            } else {
+                document.querySelector("#info").innerText = "Ethereum object doesn't exist!";
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    const nameUpdate = async (read = false) => {
+        if (account == undefined) {
+            document.querySelector("#info").innerText = "You need to connect to blochcain network first.";
+            return await checkIfWalletIsConnected()
+        }
+        /*
+         * First make sure we have access to window.ethereum
+         */
+        const { ethereum } = window;
+        if (ethereum) {
+            provider = new ethers.providers.Web3Provider(ethereum);
+            signer = provider.getSigner();
+            connectedContract = new ethers.Contract(CONTRACT_ADDRESS, abi.abi, signer);
+            // const nftContractFactory = await hre.ethers.getContractFactory('MyContract');
+            // const nftContract = await nftContractFactory.deploy();
+            // await nftContract.deployed();
+            if (read) {
+                document.querySelector("#info").innerHTML += `<br><span style="color: green">RESPONSE:</span>` + await connectedContract.name();
+            } else {
+            //     console.log(await connectedContract.name())
+            //     console.log(document.querySelector("#nameUpdateItem").value)
+            //     var mineing = await connectedContract.updateName(document.querySelector("#nameUpdateItem").value)
+            //     await waitAndUpdate(mineing, "#info")
+            //     console.log(await connectedContract.name())
+            }
+        }
+        return;
+    }
+    const getRGBA = async () => {
+        return false;
+
+    }
+    const checkIfWalletIsConnected = async () => {
+        /*
+         * First make sure we have access to window.ethereum
+         */
+        const { ethereum } = window;
+
+        if (!ethereum) {
+            document.querySelector("#info").innerText = "Make sure you have a wallet."
+            return;
+        } else {
+            document.querySelector("#info").innerText = "Wallet found. Attemting to connect"
+            setTimeout(() => {
+                if (document.querySelector("#info").innerText == "Wallet found. Attemting to connect") {
+                    document.querySelector("#info").innerText = "Failed to connect the wallet, please refresh the page and try again"
+                }
+            }, 333);
+        }
+        /*
+         * Check if we're authorized to access the user's wallet
+         */
+        const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+        /*
+         * User can have multiple authorized accounts, we grab the first one if its there!
+         */
+        if (accounts.length !== 0) {
+            account = accounts[0];
+            web3Connected = new Web3(Web3.givenProvider)
+            balance = await web3Connected.eth.getBalance(account)
+                .then(b => { return web3Connected.utils.fromWei(b) });
+            document.querySelectorAll(".account_info").forEach( e => {
+                e.innerHTML = `<i class="fa-solid fa-ban"></i> ` + account.slice(0, 5) + "..." + account.slice(-5) + "<br>" + balance.slice(0, 11) + " ETH";
+            });
+            document.querySelector("#info").innerText = `Connected to network. ${saleNetwork}`;
+            chanId_int = await web3Connected.eth.getChainId();
+            if (chanId_int != chainIdInt) { // rinkeby
+                document.querySelector("#info").innerText = `This Sale is only available on ${saleNetwork} network, attemting to switch networks`;
+                // debugger;
+                return await switchEthereumChain(chainId)
+            }
+        } else {
+            document.querySelector("#info").innerText = "Connection failed, please try again";
+        }
+        provider = new ethers.providers.Web3Provider(ethereum);
+        signer = provider.getSigner();
+        connectedContract = new ethers.Contract(CONTRACT_ADDRESS, abi.abi, signer);
+    }
+    const mintPredefinedNFT = async () => {
+        if (account == undefined) {
+            document.querySelector("#info").innerText = "You need to connect to blochcain network first.";
+            return await checkIfWalletIsConnected()
+        }
+        /*
+         * First make sure we have access to window.ethereum
+         */
+        const { ethereum } = window;
+        if (ethereum) {
+            document.querySelector("#info").innerText = "Connected to ethereum network."
+            const provider = new ethers.providers.Web3Provider(ethereum);
+            const signer = provider.getSigner();
+            const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, abi.abi, signer);
+            // var name_plate = document.querySelector("#name_plate").innerHTML;
+            // var RGB_plate = // document.querySelector("#RGB_plate").innerHTML;
+            // console.log(name_plate, RGB_plate)
+            document.querySelector("#info").innerText = "Oo...";
+            /// TODO
+            let main_data = await askContractToMintNftwithInputs();
+            let overrides = {
+                value: await connectedContract.cost() // ethers.utils.parseEther("0.1")
+            };
+            var nft_ = await connectedContract.makeAnEpicNFT(main_data, overrides);
+            await waitAndUpdate(nft_, "#info");
+        }
+    }
+
+
+    const randomMintFromStorage = async () => {
+        console.log("TODO go to storage pull random, delete")
+    }
+
+    function loadData() {
+        axios({
+            url: "{{ url_for('static', filename='contracts/RaqNFT.json') }}",
+            responseType: 'json',
+            credentials: "include",
+            mode: "no-cors",
+            headers: {
+                "Accept": "application/json; odata=verbose"
+            }
+        }).then((response) => {
+            abi = response.data;
+        }).catch(err => { console.error(err) })
+    }
+    async function switchEthereumChain(chainId) {
+        await window.ethereum.request({
+            method: 'wallet_switchEthereumChain',
+            params: [{ chainId: chainId }], // chainId must be in hexadecimal numbers
+        });
+        return await checkIfWalletIsConnected();
+    }
+
+    const getNew128px = () => { 
+      var mypalette = []; 
+      totalPalettes[Date.now()%totalPalettes.length].forEach(e => {
+          mypalette.push(hexToRgb(e))
+      });
+        const config = {
+          to : document.getElementById("pixelitcanvas"),
+          //defaults to document.getElementById("pixelitcanvas")
+          from : document.getElementById("px128_source"), 
+          //defaults to document.getElementById("pixelitimg")
+          scale : 0, 
+          //from 0-50, defaults to 8
+          palette : mypalette, // [[r,g,b]], 
+          //defaults to a fixed pallete
+          maxHeight: 128, 
+          //defaults to null
+          maxWidth: 128, 
+          //defaults to null
+        }
+        px = new pixelit(config);
+        px.draw().pixelate();
+        px.convertPalette();
+        px.resizeImage();
+    }
+
+    const mintPNG = () => {
+        // MINT PNG FILE INTO BLOCKCHAIN
+        img_base128 = document.querySelector("#pixelitcanvas").toDataURL("image/png")
+    }
+
+    const rgbToHex = (red, green, blue) => {
+    const rgb = (red << 16) | (green << 8) | (blue << 0);
+    return '#' + (0x1000000 + rgb).toString(16).slice(1);
+    }
+        
+    const hexToRgb = hex => {
+        const normal = hex.match(/^#([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i);
+        if (normal) return normal.slice(1).map(e => parseInt(e, 16));
+
+        const shorthand = hex.match(/^#([0-9a-f])([0-9a-f])([0-9a-f])$/i);  
+        if (shorthand) return shorthand.slice(1).map(e => 0x11 * parseInt(e, 16));
+
+        return null;
+    }
+
+    const MintPixelArt = async () => {
+        img_base128 = document.querySelector("#pixelitcanvas").toDataURL("image/png");
+        try {
+            var unique_id = await connectedContract.totalCount();
+        } catch {
+            await checkIfWalletIsConnected();
+            var unique_id = await connectedContract.totalCount();
+        }
+        var nftData = {
+            attributes: [
+                // {
+                //     trait_type: "Red",
+                //     value: String(R)
+                // },{
+                //     trait_type: "Blue",
+                //     value: String(B)
+                // },{
+                //     trait_type: "Green",
+                //     value: String(G)
+                // },{
+                //     trait_type: "Text Size",
+                //     value: text_size
+                // },{
+                //     trait_type: "Name Lenght",
+                //     value: _name.length
+                // },{
+                //     trait_type: "Description Lenght",
+                //     value: description.length
+                // },
+                {
+                  "display_type": "date", 
+                  "trait_type": "birthday", 
+                  "value": Date.now()
+                }
+            ],
+            name: `#${parseInt(unique_id) + 1}`,
+            description: "Each unique, each randomly generated modern-pixel art",
+            image: img_base128,
+            external_link: `${BASE_URL}token/${parseInt(unique_id) + 1}`
+        }
+        console.log(JSON.stringify(nftData))
+        var b128 = btoa(unescape(encodeURIComponent(
+            JSON.stringify(nftData)
+            // `{
+            // "name": "Spongebob Cowboy Pants",
+            // "description": "A silent hero. A watchful protector.",
+            // "image": "https://i.imgur.com/v7U019j.png"
+            // }`
+        )));
+        // var str = decodeURIComponent(escape(window.atob(b128)));
+        var nft_;
+        if ( await connectedContract.owner() == ethers.utils.getAddress(account) ) {
+            nft_ = await connectedContract.makeAnEpicNFT(b128);
+        } else {
+            let overrides = {
+                    value: await connectedContract.cost() // ethers.utils.parseEther("0.1")
+                };
+            nft_ = await connectedContract.makeAnEpicNFT(b128, overrides);
+        }
+        await waitAndUpdate(nft_, "#info");
+    }
+
+    function INITIALIZE() {
+        loadData();
+        getNew128px();
+    }
+    function consoleState(event) {
+        var text = event.target.innerText;
+        if (text == "❌") {
+            // ❌
+            event.target.parentElement.parentElement.hidden = true;
+        } else if (text == "🔲") {
+            // 🔲
+            consoleStateOn()
+        } else {
+            // ➖
+            consoleStateOff()
+        }
+        // var stat_div = document.querySelector("#min_max_button");
+        // var minimize_icon =`<i class="fa-solid fa-arrows-minimize"></i>`
+        // var maximize_icon =`<i class="fa-solid fa-arrows-maximize"></i>`
+        //debugger;
+
+
+    }
+
+    function consoleStateOn() {
+        var _console = document.querySelector("#info");
+        _console.parentElement.style.top = "65%"
+        _console.parentElement.style.position = 'fixed'
+        _console.parentElement.style.zIndex = '500';
+    }
+    function consoleStateOff() {
+        var _console = document.querySelector("#info");
+        // _console.parentElement.style.top = "65%"
+        _console.parentElement.style.position = 'inherit'
+    }
+    </script>
+<style>
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+</style>
+<img id="px128_source" src="https://corsanywhere.herokuapp.com/https://thisartworkdoesnotexist.com/"  id="pixelitimg" alt="" crossorigin="anonymous" width="128px" height="128px">
+</body>
+</html>

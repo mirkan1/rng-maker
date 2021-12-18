@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Poppins, 'sans serif';
+}
+
+header {
+    width: 100%;
+    height: 7vh;
+    background-color: #102533;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15%;
+    align-items: center;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 2px 2px 8px 2px #10253385;
+    position: fixed;
+    z-index: 99;
+}
+header .logo {
+    display: flex;
+    align-items: center;
+}
+header .logo img {
+    width: 3rem;
+    height: 3rem;
+}
+header .burger {
+    display: none;
+}
+.slide-menu {
+    left: -100%;
+    height: 100vh;
+    position: fixed;
+    width: 70%;
+    background-color: #102533ee;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.8s;
+    overflow: hidden;
+    z-index: 111;
+}
+.slide-menu a {
+    text-decoration: none;
+    color: rgb(230,204,169);
+    letter-spacing: 2px;
+    padding: 1rem;
+    margin: 1rem;
+    border-bottom: 1px solid rgba(224, 255, 255, 0.226);
+}
+header .logo h3 {
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: rgb(230,204,169);
+}
+header .logo span {
+    text-transform: uppercase;
+    color: rgba(245, 245, 245, 0.822);
+    font-size: 0.7rem;
+}
+header ul {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+header ul li {
+    list-style: none;
+}
+header ul li a {
+    text-decoration: none;
+    color: rgb(230,204,169);
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+header ul li a:hover {
+    color: rgba(230, 204, 169, 0.5);
+}
+
+#home {
+    width: 100%;
+    /*height: 90vh;*/
+    padding: 5%;
+    background-color: rgb(230,204,169);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.intro {
+    width: 70%;
+    color: #102533;
+}
+.intro h2 {
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+.intro p {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+}
+.intro .home-btns {
+    margin-bottom: 5rem;
+}
+.intro .home-btns a {
+    box-shadow: 1px 2px 4px 0px #1025336e;
+}
+.intro a {
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-right: 2rem;
+    padding: 0.5rem 3rem;
+}
+.mint-btn {
+    border-radius: 30px;
+    background-color: #102533;
+    color: rgb(230,204,169);
+    transition: 0.3s;
+}
+.mint-btn:hover {
+    background-color: #102533a9;
+}
+.rarity-btn {
+    border: 2px solid #102533;
+    border-radius: 30px;
+    color: #102533;
+    transition: 0.3s;
+}
+.rarity-btn:hover {
+    background-color: #102533;
+    color: rgb(230,204,169);
+}
+.intro .socmed a {
+    padding: 0;
+    margin-right: 2rem;
+    color: #102533;
+    font-size: 2rem;
+    transition: 0.3s;
+}
+.intro .socmed a:hover {
+    color: #1025337e;
+}
+.nft-shill {
+    display: flex;
+    justify-content: flex-end;
+}
+.nft-shill img {
+    box-shadow: 3px 3px 10px 3px #10253379;
+    width: 22rem;
+    border-radius: 30px;
+}
+.intro .partner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+}
+.intro .partner img {
+    height: 4rem;
+    border-radius: 50%;
+    box-shadow: 1px 2px 8px 2px rgba(0, 0, 0, 0.623);
+    transition: 0.3s;
+}
+.intro .partner img:hover {
+    opacity: 0.8;
+}
+.intro .partner p {
+    font-size: 1rem;
+}
+
+#roadmap {
+    height: auto;
+    width: 100%;
+    background-color: #f5d689;
+    padding: 10vh 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    row-gap: 100px;
+    align-items: center;
+}
+}
+#roadmap::-webkit-scrollbar {
+    display: none;
+}
+#roadmap .road {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #102533;
+    padding: 2rem;
+    color: rgb(230,204,169);
+    border-radius: 30px;
+    width: 40%;
+    box-shadow: 1px 2px 6px 2px #10253381;
+}
+#roadmap .road .road-label {
+    text-align: center;
+    margin-top: -3rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    width: 8rem;
+    color: #102533;
+    border-radius: 15px;
+    background-color: rgb(230,204,169);
+}
+#roadmap .road p {
+    overflow: scroll;
+}
+#roadmap .road p::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 1440px) {
+    header ul {
+        width: 40%;
+    }
+    header .logo h3 {
+        font-size: 1rem;
+    }
+    header .logo h3 span {
+        font-size: 0.5rem;
+    }
+    header ul li a {
+        font-size: 0.8rem;
+    }
+    .intro {
+        width: 60%;
+    }
+    .intro h2 {
+        font-size: 2rem;
+    }
+    .intro p {
+        font-size: 1rem;
+    }
+    .home-btns a {
+        margin-right: 1rem;
+        font-size: 0.8rem;
+        padding: 0.5rem 2rem;
+    }
+    .nft-shill img {
+        width: 18rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    header {
+        padding: 0 10%;
+    }
+    {
+        padding: 0 10%;
+    }
+    .intro h2 {
+        margin-bottom: 1rem;
+    }
+    .intro p {
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+    }
+    .intro .home-btns {
+        margin-bottom: 2rem;
+    }
+    .intro .home-btns a {
+        font-size: 0.7rem;
+    }
+    .intro .socmed a {
+        font-size: 1.5rem;
+    }
+    .nft-shill img {
+        width: 15rem;
+    }
+    #roadmap {
+        padding-top: 20vh;
+        padding: 10vh 0 0 0;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0 5%;
+    }
+    header ul {
+        display: none;
+    }
+    header .burger {
+        display: inline-block;
+        font-size: 2rem;
+        color: rgb(230,204,169);
+    }
+    {
+        padding: 0 5%;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .intro {
+        width: 85%;
+    }
+    .intro .socmed {
+        margin-top: 3rem;
+    }
+    .intro .socmed a {
+        margin-right: 0;
+    }
+    .intro .socmed a:nth-child(2) {
+        margin: 0 2rem;
+    }
+    .nft-shill {
+        margin-top: 3rem;
+    }
+    .intro .partner {
+        flex-direction: column;
+        justify-content: center;
+    }
+    #roadmap {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 10vh 5%;
+        padding-top: 50%;
+        padding: 10vh 0 0 0;
+    }
+    #roadmap .road {
+        width: 100%;
+        padding: 1rem 2rem;
+        margin-bottom: 2rem;
+    }
+    #roadmap .road p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 414px) {
+    header .logo h3 {
+        font-size: 0.8rem;
+    }
+    .nft-shill {
+        display: none;
+    }
+    .intro {
+        width: 90%;
+    }
+    .intro .home-btns {
+        display: flex;
+        flex-direction: column;
+}
+    .intro .home-btns .mint-btn {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+    .intro .home-btns .rarity-btn {
+        width: 100%;
+    }
+    #roadmap {
+        padding: 120vh 0 0 0;
+        
+    }
+    #roadmap .road {
+        height: auto;
+        padding: 1rem;
+        margin-top: -1rem;
+    }
+    #roadmap .road .road-label {
+        padding: 0.1rem;
+        font-size: 0.8rem;
+        margin: 0;
+        background: none;
+        color: rgb(230,204,169);
+        text-align: left;
+        width: 100%;
+        padding: 10vh 0 0 0;
+    }
+    #roadmap .road .road-top {
+        margin-top: 2rem;
+    }
+    #road {
+        margin-top: 10vh;
+    }
+}
+
+* {
+    font-family: Ubuntu;
+}
+.mint-btn:hover {
+    background-color: #102533a9;
+}
+
+.road {
+    height: fit-content;
+}

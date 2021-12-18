@@ -1,0 +1,21 @@
+# SOLANA DRINK random pieces
+* background
+* glass
+* glass's liquid color
+* liquid of the glass
+* straw's color/shape
+
+# SUZANNE RANDOM PIECS
+* eye color
+* Base color
+
+
+{
+    "name": "EpicLordHamburger",
+    "description": "An NFT from the highly acclaimed square collection",
+    "image": "data:image/svg+xml;base64,INSERT_YOUR_BASE64_ENCODED_SVG_HERE"
+}
+
+
+####
+if you come to my discord channel, I am printing your nft.

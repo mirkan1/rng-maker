@@ -1,0 +1,709 @@
+ffmpeg version 4.4-essentials_build-www.gyan.dev Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 10.2.0 (Rev6, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-libass --enable-libfreetype --enable-libfribidi --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-ffnvcodec --enable-nvdec --enable-nvenc --enable-d3d11va --enable-dxva2 --enable-libmfx --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Splitting the commandline.
+Reading option '-v' ... matched as option 'v' (set logging level) with argument 'debug'.
+Reading option '-nostdin' ... matched as option 'stdin' (enable or disable interaction on standard input) with argument 0.
+Reading option '-progress' ... matched as option 'progress' (write program-readable progress information) with argument 'C:/Users/Raq/AppData/Local/Temp/KritaFFmpegProgress.PsnSjA'.
+Reading option '-r' ... matched as option 'r' (set frame rate (Hz value, fraction or abbreviation)) with argument '24'.
+Reading option '-start_number' ... matched as AVOption 'start_number' with argument '0'.
+Reading option '-i' ... matched as input url with argument 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame%04d.png'.
+Reading option '-i' ... matched as input url with argument 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/palette.png'.
+Reading option '-lavfi' ... matched as option 'lavfi' (create a complex filtergraph) with argument '[0:v][1:v] paletteuse'.
+Reading option '-y' ... matched as option 'y' (overwrite output files) with argument '1'.
+Reading option 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/random_art.gif' ... matched as output url.
+Finished splitting the commandline.
+Parsing a group of options: global .
+Applying option v (set logging level) with argument debug.
+Applying option nostdin (enable or disable interaction on standard input) with argument 0.
+Applying option progress (write program-readable progress information) with argument C:/Users/Raq/AppData/Local/Temp/KritaFFmpegProgress.PsnSjA.
+[file @ 00000202f4c1e9c0] Setting default whitelist 'file,crypto,data'
+Applying option lavfi (create a complex filtergraph) with argument [0:v][1:v] paletteuse.
+Applying option y (overwrite output files) with argument 1.
+Successfully parsed a group of options.
+Parsing a group of options: input url C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame%04d.png.
+Applying option r (set frame rate (Hz value, fraction or abbreviation)) with argument 24.
+Successfully parsed a group of options.
+Opening an input file: C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame%04d.png.
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0000.png' for reading
+[file @ 00000202f4c63a00] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c6bbc0] Statistics: 67923 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0001.png' for reading
+[file @ 00000202f4c63ac0] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c63c40] Statistics: 67923 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0002.png' for reading
+[file @ 00000202f4c63b40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c63e80] Statistics: 67923 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0003.png' for reading
+[file @ 00000202f4c63b40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c64040] Statistics: 67923 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0004.png' for reading
+[file @ 00000202f4c63b40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c64200] Statistics: 67923 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0005.png' for reading
+[file @ 00000202f4c63b40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c643c0] Statistics: 67923 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0006.png' for reading
+[file @ 00000202f4c63b40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c64580] Statistics: 67923 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0007.png' for reading
+[file @ 00000202f4c63b40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 67923 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0008.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 67923 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0009.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 67923 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0010.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 68607 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0011.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 68607 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0012.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 68607 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0013.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 68607 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0014.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 68607 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0015.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 68607 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0016.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 68607 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0017.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 68607 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0018.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 68607 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0019.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 68607 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0020.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 47683 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0021.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 47683 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0022.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 47683 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0023.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 47683 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0024.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 47683 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0025.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 47683 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0026.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 47683 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0027.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 47683 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0028.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 47683 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0029.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 47683 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0030.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 49034 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0031.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 49034 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0032.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 49034 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0033.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 49034 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0034.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 49034 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0035.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 49034 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0036.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 49034 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0037.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 49034 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0038.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 49034 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0039.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 49034 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0040.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 44081 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0041.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 44081 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0042.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 44081 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0043.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 44081 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0044.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 44081 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0045.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 44081 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0046.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 44081 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0047.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 44081 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0048.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 44081 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0049.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 44081 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0050.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 38435 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0051.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 38435 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0052.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 38435 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0053.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 38435 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0054.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 38435 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0055.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 38435 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0056.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 38435 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0057.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 38435 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0058.png' for reading
+[file @ 00000202f4c65740] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65840] Statistics: 38435 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0059.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 38435 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0060.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 50335 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0061.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 50335 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0062.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 50335 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0063.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 50335 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0064.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 50335 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0065.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 50335 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0066.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 50335 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0067.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 50335 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0068.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 50335 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0069.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 50335 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0070.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 53265 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0071.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 53265 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0072.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 53265 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0073.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 53265 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0074.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 53265 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0075.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 53265 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0076.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 53265 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0077.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 53265 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0078.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 53265 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0079.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 53265 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0080.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 54347 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0081.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 54347 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0082.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 54347 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0083.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 54347 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0084.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 54347 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0085.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 54347 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0086.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 54347 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0087.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 54347 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0088.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 54347 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0089.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 54347 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0090.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 42597 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0091.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 42597 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0092.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 42597 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0093.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 42597 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0094.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 42597 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0095.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 42597 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0096.png' for reading
+[file @ 00000202f4c6bb40] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f4c65740] Statistics: 42597 bytes read, 0 seeks
+[image2 @ 00000202f4c5edc0] Probe buffer size limit of 5000000 bytes reached
+Input #0, image2, from 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame%04d.png':
+  Duration: 00:00:06.44, start: 0.000000, bitrate: N/A
+  Stream #0:0, 97, 1/25: Video: png, 1 reference frame, rgba(pc), 1080x1080 [SAR 11811:11811 DAR 1:1], 0/1, 25 fps, 25 tbr, 25 tbn, 25 tbc
+Successfully opened the file.
+Parsing a group of options: input url C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/palette.png.
+Successfully parsed a group of options.
+Opening an input file: C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/palette.png.
+[NULL @ 00000202f4c62880] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/palette.png' for reading
+[file @ 00000202f4c6bc00] Setting default whitelist 'file,crypto,data'
+[png_pipe @ 00000202f4c62880] Format png_pipe probed with size=2048 and score=99
+[png_pipe @ 00000202f4c62880] Before avformat_find_stream_info() pos: 0 bytes read:1001 seeks:0 nb_streams:1
+[png_pipe @ 00000202f4c62880] After avformat_find_stream_info() pos: 1001 bytes read:1001 seeks:0 frames:1
+Input #1, png_pipe, from 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/palette.png':
+  Duration: N/A, bitrate: N/A
+  Stream #1:0, 1, 1/25: Video: png, 1 reference frame, rgba(pc), 16x16 [SAR 1:1 DAR 1:1], 0/1, 25 fps, 25 tbr, 25 tbn, 25 tbc
+Successfully opened the file.
+Parsing a group of options: output url C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/random_art.gif.
+Successfully parsed a group of options.
+Opening an output file: C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/random_art.gif.
+[file @ 00000202f4c69100] Setting default whitelist 'file,crypto,data'
+Successfully opened the file.
+detected 12 logical cores
+Stream mapping:
+  Stream #0:0 (png) -> paletteuse:default
+  Stream #1:0 (png) -> paletteuse:palette
+  paletteuse -> Stream #0:0 (gif)
+cur_dts is invalid st:0 (0) [init:0 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+    Last message repeated 169 times
+[image2 @ 00000202f4c5edc0] Thread message queue blocking; consider raising the thread_queue_size option (current value: 8)
+cur_dts is invalid st:0 (0) [init:0 i_done:0 finish:0] (this is harmless if it occurs once at the start per stream)
+    Last message repeated 12 times
+[graph 0 input from stream 0:0 @ 00000202f4c63f80] Setting 'video_size' to value '1080x1080'
+[graph 0 input from stream 0:0 @ 00000202f4c63f80] Setting 'pix_fmt' to value '26'
+[graph 0 input from stream 0:0 @ 00000202f4c63f80] Setting 'time_base' to value '1/24'
+[graph 0 input from stream 0:0 @ 00000202f4c63f80] Setting 'pixel_aspect' to value '11811/11811'
+[graph 0 input from stream 0:0 @ 00000202f4c63f80] Setting 'frame_rate' to value '24/1'
+[graph 0 input from stream 0:0 @ 00000202f4c63f80] w:1080 h:1080 pixfmt:rgba tb:1/24 fr:24/1 sar:11811/11811
+[graph 0 input from stream 1:0 @ 00000202f59fc780] Setting 'video_size' to value '16x16'
+[graph 0 input from stream 1:0 @ 00000202f59fc780] Setting 'pix_fmt' to value '26'
+[graph 0 input from stream 1:0 @ 00000202f59fc780] Setting 'time_base' to value '1/25'
+[graph 0 input from stream 1:0 @ 00000202f59fc780] Setting 'pixel_aspect' to value '1/1'
+[graph 0 input from stream 1:0 @ 00000202f59fc780] Setting 'frame_rate' to value '25/1'
+[graph 0 input from stream 1:0 @ 00000202f59fc780] w:16 h:16 pixfmt:rgba tb:1/25 fr:25/1 sar:1/1
+[format @ 00000202f59e0ac0] Setting 'pix_fmts' to value 'rgb8|bgr8|rgb4_byte|bgr4_byte|gray|pal8'
+[auto_scaler_0 @ 00000202f5afed80] w:iw h:ih flags:'bilinear' interl:0
+[Parsed_paletteuse_0 @ 00000202f4c64300] auto-inserting filter 'auto_scaler_0' between the filter 'graph 0 input from stream 0:0' and the filter 'Parsed_paletteuse_0'
+[auto_scaler_1 @ 00000202f5a13180] w:iw h:ih flags:'bilinear' interl:0
+[Parsed_paletteuse_0 @ 00000202f4c64300] auto-inserting filter 'auto_scaler_1' between the filter 'graph 0 input from stream 1:0' and the filter 'Parsed_paletteuse_0'
+[AVFilterGraph @ 00000202f59cf500] query_formats: 5 queried, 2 merged, 2 already done, 0 delayed
+[swscaler @ 00000202f91a00c0] Forcing full internal H chroma due to input having non subsampled chroma
+[auto_scaler_0 @ 00000202f5afed80] w:1080 h:1080 fmt:rgba sar:11811/11811 -> w:1080 h:1080 fmt:bgra sar:1/1 flags:0x2
+[swscaler @ 00000202f91ad000] Forcing full internal H chroma due to input having non subsampled chroma
+[auto_scaler_1 @ 00000202f5a13180] w:16 h:16 fmt:rgba sar:1/1 -> w:16 h:16 fmt:bgra sar:1/1 flags:0x2
+[Parsed_paletteuse_0 @ 00000202f4c64300] [framesync @ 00000202f5a7d008] Selected 1/600 time base
+[Parsed_paletteuse_0 @ 00000202f4c64300] [framesync @ 00000202f5a7d008] Sync level 2
+Output #0, gif, to 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/random_art.gif':
+  Metadata:
+    encoder         : Lavf58.76.100
+  Stream #0:0, 0, 1/100: Video: gif, 1 reference frame, pal8(pc, progressive), 1080x1080 (0x0) [SAR 1:1 DAR 1:1], 0/1, q=2-31, 200 kb/s, 24 fps, 100 tbn (default)
+    Metadata:
+      encoder         : Lavc58.134.100 gif
+Clipping frame in rate conversion by 0.000008
+frame=    1 fps=0.0 q=-0.0 size=       0kB time=00:00:00.01 bitrate=   0.0kbits/s speed=0.691x    [gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+    Last message repeated 5 times
+frame=    7 fps=0.0 q=-0.0 size=     256kB time=00:00:00.26 bitrate=8066.0kbits/s speed=0.471x    [gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+    Last message repeated 2 times
+[gif @ 00000202f4c683c0] 1080x1080 image at pos (0;0) [area:1080x1080]
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+    Last message repeated 1 times
+frame=   13 fps= 12 q=-0.0 size=     768kB time=00:00:00.51 bitrate=12336.2kbits/s speed=0.48x    [gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+    Last message repeated 6 times
+[gif @ 00000202f4c683c0] 1080x1080 image at pos (0;0) [area:1080x1080]
+frame=   21 fps= 13 q=-0.0 size=     768kB time=00:00:00.84 bitrate=7489.8kbits/s speed=0.515x    [gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+    Last message repeated 8 times
+[gif @ 00000202f4c683c0] 1080x1080 image at pos (0;0) [area:1080x1080]
+frame=   31 fps= 14 q=-0.0 size=     768kB time=00:00:01.26 bitrate=4993.2kbits/s speed=0.578x    [gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+    Last message repeated 6 times
+frame=   38 fps= 14 q=-0.0 size=    1024kB time=00:00:01.55 bitrate=5412.0kbits/s speed=0.57x    [gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+    Last message repeated 1 times
+[gif @ 00000202f4c683c0] 1080x1080 image at pos (0;0) [area:1080x1080]
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+    Last message repeated 7 times
+frame=   49 fps= 15 q=-0.0 size=    1280kB time=00:00:02.01 bitrate=5216.8kbits/s speed=0.618x    [gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[gif @ 00000202f4c683c0] 1080x1080 image at pos (0;0) [area:1080x1080]
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+    Last message repeated 8 times
+[gif @ 00000202f4c683c0] 1080x1080 image at pos (0;0) [area:1080x1080]
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+frame=   62 fps= 16 q=-0.0 size=    1536kB time=00:00:02.55 bitrate=4934.5kbits/s speed=0.662x    [gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+    Last message repeated 5 times
+frame=   68 fps= 16 q=-0.0 size=    1536kB time=00:00:02.80 bitrate=4493.9kbits/s speed=0.644x    [gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+    Last message repeated 1 times
+[gif @ 00000202f4c683c0] 1080x1080 image at pos (0;0) [area:1080x1080]
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+    Last message repeated 1 times
+frame=   73 fps= 15 q=-0.0 size=    1792kB time=00:00:03.01 bitrate=4877.1kbits/s speed=0.617x    [gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+    Last message repeated 2 times
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0097.png' for reading
+[file @ 00000202f5a13780] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202face0a00] Statistics: 42597 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0098.png' for reading
+[file @ 00000202f5a13080] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202face3d40] Statistics: 42597 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0099.png' for reading
+[file @ 00000202f5a13580] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202face4bc0] Statistics: 42597 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+frame=   79 fps= 14 q=-0.0 size=    1792kB time=00:00:03.26 bitrate=4503.1kbits/s speed=0.597x    [image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0100.png' for reading
+[file @ 00000202f5a13680] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202face1340] Statistics: 68393 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0101.png' for reading
+[file @ 00000202f5a13780] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202face2700] Statistics: 68393 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1080x1080 image at pos (0;0) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0102.png' for reading
+[file @ 00000202f5a12980] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202fade7f80] Statistics: 68393 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0103.png' for reading
+[file @ 00000202f5a13f80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202fadeaec0] Statistics: 68393 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0104.png' for reading
+[file @ 00000202f5a14080] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202fadeba80] Statistics: 68393 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+frame=   84 fps= 14 q=-0.0 size=    2304kB time=00:00:03.47 bitrate=5439.3kbits/s speed=0.575x    [image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0105.png' for reading
+[file @ 00000202f5a12780] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202fade8f40] Statistics: 68393 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0106.png' for reading
+[file @ 00000202f5a13e80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202fade9080] Statistics: 68393 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0107.png' for reading
+[file @ 00000202f5a14580] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202fadec280] Statistics: 68393 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0108.png' for reading
+[file @ 00000202f5a12780] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202fadec7c0] Statistics: 68393 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0109.png' for reading
+[file @ 00000202f5a13480] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202fadec500] Statistics: 68393 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0110.png' for reading
+[file @ 00000202f5a13480] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202fadec900] Statistics: 59711 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+frame=   90 fps= 14 q=-0.0 size=    2304kB time=00:00:03.72 bitrate=5073.8kbits/s speed=0.567x    [image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0111.png' for reading
+[file @ 00000202f5a14380] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202fadecbc0] Statistics: 59711 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1080x1080 image at pos (0;0) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0112.png' for reading
+[file @ 00000202f5a12780] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202fade0ac0] Statistics: 59711 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0113.png' for reading
+[file @ 00000202f5a12880] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202faddda40] Statistics: 59711 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0114.png' for reading
+[file @ 00000202f5a13080] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202faddf840] Statistics: 59711 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0115.png' for reading
+[file @ 00000202f5a13280] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202fade0c00] Statistics: 59711 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0116.png' for reading
+[file @ 00000202f5a13d80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202fade1280] Statistics: 59711 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0117.png' for reading
+[file @ 00000202f5a12880] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202fadddcc0] Statistics: 59711 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+frame=   97 fps= 14 q=-0.0 size=    2560kB time=00:00:04.01 bitrate=5229.8kbits/s speed=0.562x    [image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0118.png' for reading
+[file @ 00000202f5a13480] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202fade1e80] Statistics: 59711 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0119.png' for reading
+[file @ 00000202f5a13e80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202fade1e80] Statistics: 59711 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0120.png' for reading
+[file @ 00000202f5a13680] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202fade1540] Statistics: 68391 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0121.png' for reading
+[file @ 00000202f5a12780] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202fade1fc0] Statistics: 68391 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1080x1080 image at pos (0;0) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0122.png' for reading
+[file @ 00000202f5a12d80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f965f940] Statistics: 68391 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0123.png' for reading
+[file @ 00000202f5a13b80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f965d480] Statistics: 68391 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+frame=  103 fps= 13 q=-0.0 size=    2816kB time=00:00:04.26 bitrate=5415.2kbits/s speed=0.551x    [image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0124.png' for reading
+[file @ 00000202f5a14380] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f965ba40] Statistics: 68391 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0125.png' for reading
+[file @ 00000202f5a14280] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f965fd40] Statistics: 68391 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0126.png' for reading
+[file @ 00000202f5a12980] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f965e580] Statistics: 68391 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0127.png' for reading
+[file @ 00000202f5a13380] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f965d080] Statistics: 68391 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0128.png' for reading
+[file @ 00000202f5a12b80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f965b900] Statistics: 68391 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+frame=  108 fps= 13 q=-0.0 size=    2816kB time=00:00:04.47 bitrate=5160.8kbits/s speed=0.54x    [image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0129.png' for reading
+[file @ 00000202f5a13b80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f965ce00] Statistics: 68391 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0130.png' for reading
+[file @ 00000202f5a13f80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f965b7c0] Statistics: 46541 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0131.png' for reading
+[file @ 00000202f5a12c80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f965c0c0] Statistics: 46541 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1080x1080 image at pos (0;0) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0132.png' for reading
+[file @ 00000202f5a14580] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f5a68540] Statistics: 46541 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+frame=  112 fps= 13 q=-0.0 size=    3328kB time=00:00:04.64 bitrate=5875.6kbits/s speed=0.525x    [image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0133.png' for reading
+[file @ 00000202f5a14480] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f5a67c00] Statistics: 46541 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0134.png' for reading
+[file @ 00000202f5a14380] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f5a68400] Statistics: 46541 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0135.png' for reading
+[file @ 00000202f5a14480] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f5a68680] Statistics: 46541 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0136.png' for reading
+[file @ 00000202f5a13280] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f5a68540] Statistics: 46541 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0137.png' for reading
+[file @ 00000202f5a13280] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f5a67ec0] Statistics: 46541 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+frame=  117 fps= 12 q=-0.0 size=    3328kB time=00:00:04.84 bitrate=5632.8kbits/s speed=0.514x    [image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0138.png' for reading
+[file @ 00000202f5a13d80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f5a68680] Statistics: 46541 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0139.png' for reading
+[file @ 00000202f5a13b80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f5a68000] Statistics: 46541 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0140.png' for reading
+[file @ 00000202f5a13f80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f5a67ac0] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0141.png' for reading
+[file @ 00000202f5a14180] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f5a67c00] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1080x1080 image at pos (0;0) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0142.png' for reading
+[file @ 00000202f5a13380] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f5a67ac0] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+frame=  122 fps= 12 q=-0.0 size=    3584kB time=00:00:05.05 bitrate=5813.9kbits/s speed=0.496x    [image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0143.png' for reading
+[file @ 00000202f5a14180] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f95b99c0] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0144.png' for reading
+[file @ 00000202f5a14580] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f95b95c0] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0145.png' for reading
+[file @ 00000202f5a13d80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f95b9880] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0146.png' for reading
+[file @ 00000202f5a13880] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f95b95c0] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+frame=  126 fps= 12 q=-0.0 size=    3584kB time=00:00:05.22 bitrate=5624.5kbits/s speed=0.486x    [image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0147.png' for reading
+[file @ 00000202f5a13780] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f95b95c0] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0148.png' for reading
+[file @ 00000202f5a13580] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f95b9dc0] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0149.png' for reading
+[file @ 00000202f5a12b80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f95b9c40] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0150.png' for reading
+[file @ 00000202f5a13a80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f95b9480] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+frame=  130 fps= 12 q=-0.0 size=    3584kB time=00:00:05.39 bitrate=5447.1kbits/s speed=0.478x    [image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0151.png' for reading
+[file @ 00000202f5a13a80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f95b9b00] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1080x1080 image at pos (0;0) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0152.png' for reading
+[file @ 00000202f5a14480] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f95b9080] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0153.png' for reading
+[file @ 00000202f5a13b80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f95b9b00] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0154.png' for reading
+[file @ 00000202f5a13380] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f95b9480] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0155.png' for reading
+[file @ 00000202f5a12880] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f95b9080] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0156.png' for reading
+[file @ 00000202f5a14180] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f95b9340] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0157.png' for reading
+[file @ 00000202f5a13080] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f95b9340] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+frame=  137 fps= 12 q=-0.0 size=    3840kB time=00:00:05.68 bitrate=5538.3kbits/s speed=0.479x    [image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0158.png' for reading
+[file @ 00000202f5a13480] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f95b9080] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0159.png' for reading
+[file @ 00000202f5a12b80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f95b91c0] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[image2 @ 00000202f4c5edc0] Opening 'C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame0160.png' for reading
+[file @ 00000202f5a12a80] Setting default whitelist 'file,crypto,data'
+[AVIOContext @ 00000202f95b9480] Statistics: 50625 bytes read, 0 seeks
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+[gif @ 00000202f4c683c0] 1080x1080 image at pos (0;0) [area:1080x1080]
+[gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+    Last message repeated 1 times
+frame=  143 fps= 11 q=-0.0 size=    4096kB time=00:00:05.93 bitrate=5658.4kbits/s speed=0.476x    [gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+    Last message repeated 4 times
+frame=  148 fps= 11 q=-0.0 size=    4096kB time=00:00:06.14 bitrate=5464.9kbits/s speed=0.471x    [gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+    Last message repeated 4 times
+frame=  153 fps= 11 q=-0.0 size=    4096kB time=00:00:06.34 bitrate=5292.5kbits/s speed=0.465x    [gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+    Last message repeated 4 times
+frame=  158 fps= 11 q=-0.0 size=    4096kB time=00:00:06.55 bitrate=5122.8kbits/s speed=0.462x    [gif @ 00000202f4c683c0] 1x1 image at pos (1079;1079) [area:1080x1080]
+    Last message repeated 2 times
+[Parsed_paletteuse_0 @ 00000202f4c64300] [framesync @ 00000202f5a7d008] Sync level 0
+[out_0_0 @ 00000202f59e09c0] EOF on sink link out_0_0:default.
+No more output streams to write to, finishing.
+frame=  161 fps= 11 q=-0.0 Lsize=    4246kB time=00:00:06.68 bitrate=5207.2kbits/s speed=0.456x    
+[AVIOContext @ 00000202f4c5eb00] Statistics: 0 seeks, 27 writeouts
+video:4246kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.000460%
+Input file #0 (C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/frame%04d.png):
+  Input stream #0:0 (video): 161 packets read (8656555 bytes); 161 frames decoded; 
+  Total: 161 packets (8656555 bytes) demuxed
+Input file #1 (C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/palette.png):
+  Input stream #1:0 (video): 1 packets read (1001 bytes); 1 frames decoded; 
+  Total: 1 packets (1001 bytes) demuxed
+Output file #0 (C:/Users/Raq/Desktop/mirkan projects/solanaDrink/static/gif/random_art.gif):
+  Output stream #0:0 (video): 161 frames encoded; 161 packets muxed (4348010 bytes); 
+  Total: 161 packets (4348010 bytes) muxed
+162 frames successfully decoded, 0 decoding errors
+[AVIOContext @ 00000202f4c69200] Statistics: 0 seeks, 17 writeouts
+[AVIOContext @ 00000202f4cdee00] Statistics: 1001 bytes read, 0 seeks

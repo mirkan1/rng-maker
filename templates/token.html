@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ ID }}</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+const { ethereum } = window;
+if (ethereum) {
+    document.querySelector("#info").innerText = "Connected to ethereum network."
+    const provider = new ethers.providers.Web3Provider(ethereum);
+    const signer = provider.getSigner();
+    const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, abi.abi, signer);
+    console.log(connectedContract)
+}
+</script>
+</html>

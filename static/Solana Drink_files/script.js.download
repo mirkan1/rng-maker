@@ -1,0 +1,24 @@
+const burger = document.querySelector(".burger");
+const slideMenu = document.querySelector(".slide-menu");
+const home = document.getElementById("home");
+const roadmap = document.getElementById("roadmap");
+
+burger.addEventListener("click", () => {
+    if (slideMenu.style.left == "0px") {
+        slideMenu.style.left = "-100%";
+    } else {
+        slideMenu.style.left = "0px";
+    }
+});
+home.addEventListener("click", () => {
+    slideMenu.style.left = "-100%";
+});
+roadmap.addEventListener("click", () => {
+    slideMenu.style.left = "-100%";
+});
+
+VanillaTilt.init(document.querySelector(".nft-shill"), {
+    max: 25,
+    speed: 400,
+    scale: 1.1
+});
