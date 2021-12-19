@@ -47,7 +47,7 @@
         <div class="intro">
             <h2>raqnft<i class="fa-solid fa-monkey"></i></h2>
             <h2>BETA POLYGON MUMBAI SERVER<i class="fa-solid fa-monkey"></i></h2>
-            <h2>remaining 2000/2000<i class="fa-solid fa-monkey"></i></h2>
+            <h2 id="totalTokenCount"><a href="#" onclick="getTotalCount()">connect or click here to see total tokens</a></h2>
             <p>raqNFT is an NFT Contract. 2000 token cap</p>
             <p>Create an NFT with your inputs: name input(visible in the NFT), 3 color integer inputs of(Red, Blue, Green), text size int, description input is limited to 200 character long.</p>
             <p>Send it to your wallet get Opensea link and transaction history as proof of work.</p>
@@ -202,6 +202,7 @@
     const SCAN = "https://mumbai.polygonscan.com/tx/";
     const openSeaPrefix = "https://testnets.opensea.io/assets/mumbai/"
     const saleNetwork = "polygon/matic";
+    const networkCurrency  = saleNetwork == "polygon/matic" ? "MATIC" : "ETH"
     const rariblePrefix = "https://rinkeby.rarible.com/token/"
     // const cost = 
     //////////////////////////////////////////////////////////////////////////////////////////
@@ -444,7 +445,7 @@
             balance = await web3Connected.eth.getBalance(account)
                 .then(b => { return web3Connected.utils.fromWei(b) });
             document.querySelectorAll(".account_info").forEach( e => {
-                e.innerHTML = `<i class="fa-solid fa-ban"></i> ` + account.slice(0, 5) + "..." + account.slice(-5) + "<br>" + balance.slice(0, 11) + " ETH";
+                e.innerHTML = `<i class="fa-solid fa-ban"></i> ` + account.slice(0, 5) + "..." + account.slice(-5) + "<br>" + balance.slice(0, 11) + " " + networkCurrency;
             });
             document.querySelector("#info").innerText = `Connected to network. ${saleNetwork}`;
             chanId_int = await web3Connected.eth.getChainId();
@@ -460,6 +461,7 @@
         signer = provider.getSigner();
         connectedContract = new ethers.Contract(CONTRACT_ADDRESS, abi.abi, signer);
     }
+
     const mintPredefinedNFT = async () => {
         if (account == undefined) {
             document.querySelector("#info").innerText = "You need to connect to blochcain network first.";
@@ -621,10 +623,12 @@
         await waitAndUpdate(nft_, "#info");
     }
 
-    function INITIALIZE() {
+    const INITIALIZE = async () => {
         loadData();
         getNew128px();
+        await getTotalCount();
     }
+
     function consoleState(event) {
         var text = event.target.innerText;
         if (text == "❌") {
@@ -656,6 +660,19 @@
         // _console.parentElement.style.top = "65%"
         _console.parentElement.style.position = 'inherit'
     }
+    const getTotalCount = async () => {
+        await checkIfWalletIsConnected()
+            .then( async () => {
+                if (connectedContract) {
+                    let totalCount = await connectedContract.totalCount()
+                    let maxSupply = parseFloat(await connectedContract.maxSupply())
+                    document.querySelector("#totalTokenCount").innerHTML = `${totalCount}/${maxSupply} remeaning`
+                } else {
+                    alert(`you need to connect to the ${saleNetwork} network`)
+                }
+            })
+    }
+    
     </script>
 <style>
 @media only screen and (max-width: 600px) {
