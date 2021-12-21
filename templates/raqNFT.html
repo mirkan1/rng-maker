@@ -17,6 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/florin.css')}}">
+    <!-- Fontawesome -->
+    <link type="text/css" href="/static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
     <title>RNG-MAKER</title>
 </head>
 
@@ -81,20 +83,21 @@
         flex-direction: column;
         align-items: center;
     ">
-        <div style="background: black; width:100%; min-height: 150px; padding:2%; border-style: solid; border-color: white;border-radius: 30px 30px 30px 30px;box-shadow: 2px 2px 8px 2px #102533;background-color: #102533;">
-            <div style="display: flex;flex-direction: row-reverse;">
-                <a onclick="consoleState(event)" id="min_max_button" style="cursor: pointer;">❌</a>
-                <a onclick="consoleState(event)" id="min_max_button" style="cursor: pointer;">🔲</a>
-                <a onclick="consoleState(event)" id="min_max_button" style="cursor: pointer;">➖</a>
+        <div style="background: black; width:100%; min-height: 150px; padding:0 2%; border-style: solid; border-color: white;border-radius: 30px 30px 30px 30px;box-shadow: 2px 2px 8px 2px #102533;background-color: #102533;" id="console_div" hidden>
+            <div style="display: flex;flex-direction: row-reverse; height: 40px;">
+                <a onclick="consoleState(event)" id="min_max_button_x" style="cursor: pointer;">❌</a>
+                <a onclick="consoleState(event)" id="min_max_button_sqr" style="cursor: pointer;">🔲</a>
+                <a onclick="consoleState(event)" id="min_max_button_minus" style="cursor: pointer;">➖</a>
             </div>
-            <p id="info" style="color: white"><span style="font-size: 20px; color: seagreen;">CONSOLE</span><br></p>
+            <p id="info" style="color: white; margin: 0 0 0 20px;overflow:auto"><span style="font-size: 20px; color: seagreen; ">CONSOLE</span><br></p>
         </div>
-        <div class="container" id="container">
+        <div class="container" id="container" style="position: fixed;top: 6%;background: rgba(192,192,192,.78);height: 100%;" hidden>
             <div class="form-container sign-in-container">
-                <div id="form_user" action="javascript:RBG_CHANGE({target:{id:'all'}})" style="align-items:baseline;">
+                <a onclick="hide_console_Q1_task(state=false)" id="hide_RBG_Button" style="cursor: pointer; z-index: 9999;"><i class="fa-solid fa-cancel" style="font-size: 70px;margin: 10px 0 0 10px;color: red;"></i></a>
+                <div id="form_user" action="javascript:RBG_CHANGE({target:{id:'all'}})" style="align-items:center;height:auto">
                     <div class="flex-left-to-right">
                         <h2>name:</h2>
-                        <input id="_name" type="text" name="name" value="" onchange="RBG_CHANGE(event)" maxlength="10" style="width:200px" value="EpicLordHamburger">
+                        <input id="_name" type="text" name="name" value="" onchange="RBG_CHANGE(event)" maxlength="10" style="width:200px" value="">
                     </div>
                     <div class="flex-left-to-right">
                         <h2>R:</h2>
@@ -114,7 +117,7 @@
                     </div>
                     <div class="flex-left-to-right">
                         <h2>desc:</h2>
-                        <input id="description" type="text" name="description" value="UNKNOWN" onchange="RBG_CHANGE(event)" max="200" style="width:200px">
+                        <input id="description" type="text" name="description" value="" onchange="RBG_CHANGE(event)" max="200" style="width:200px">
                     </div>
                     <div style="display: flex;">                        
                         <!-- <button class="mint-btn" style="background-color: #102533;" id="reset">RESET DESING</button> -->
@@ -126,12 +129,12 @@
                 </div>
             </div>
             <div class="overlay-container" width="100%">
-                <div class="" style="display:flex;align-items: center; flex-direction: row; height:100%">
+                <div class="" style="display:flex;align-items: center; flex-direction: row; height:100%;overflow: auto;">
                     <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 350 350">
                         <style>.base { fill: white; font-family: serif; font-size: 15px; }</style>
                         <rect width="100%" height="100%" fill="rgba(0,0,0,1)" />
-                        <text id="name_plate" x="5%" y="20%" class="base" dominant-baseline="right" text-anchor="right">EpicLordHamburger</text>
-                        <text id="description_plate" x="5%" y="40%" class="base" dominant-baseline="right" text-anchor="right">UNKNOWN</text>
+                        <text id="name_plate" x="5%" y="20%" class="base" dominant-baseline="right" text-anchor="right"></text>
+                        <text id="description_plate" x="5%" y="40%" class="base" dominant-baseline="right" text-anchor="right"></text>
                     </svg>
                 </div>
             </div>
@@ -150,7 +153,7 @@
                 <p>Mint this your background data card into your ethereum wallet for 10 MATIC + GAS<br> || base64 format<br>|| Sharing same pool with MetaInfoCard, LIMIT 2000</p>
             </div>
             <div>
-                <button class="mint-btn" style="background-color: #102533;margin-bottom: 5px;border: 3px solid #e6cca9;" onclick="MintPixelArt()"><span style="color:#e6cca9; display:flex; "><i class="fas fa-hammer"></i>&nbsp;MINT</span></button>
+                <button class="mint-btn" style="background-color: #102533;margin-bottom: 5px;border: 3px solid #e6cca9;" onclick="hide_console_Q1_task(state=true)"><span style="color:#e6cca9; display:flex; "><i class="fas fa-user"></i>&nbsp;DISPLAY</span></button>
                 <!-- <button class="mint-btn" style="background-color: #102533;margin-bottom: 5px;border: 3px solid #e6cca9;" onclick="getNew128px()"><span style="color:#e6cca9; display:flex; "><i class="fa-solid fa-print"></i>&nbsp;Refresh</span></button> -->
             </div>
         </div>
@@ -176,14 +179,14 @@
             </div>
             <p>Your image of up to 512x512 pixels, you can pixeliate it and write aout it into your data storage in blockchain or send it without attributes</p>
             <p>Save your own image file into blockchain. probably will be limited to some pixel length: 1080px?</p>
-            <p>Token limit increated to 4000</p>
+            <p>Token limit increased to 4000</p>
         </div>
         <div class="road">
             <div class="road-label">
                 <h3>Q3 2022 - Upcoming events</h3>
             </div>
             <p>Special NFTs release and available on Market. Collaboration with an Exclusive Partnership.</p>
-            <p>Token limit increated to 8000</p>
+            <p>Token limit increased to 8000</p>
         </div>
     </div>
     <script type="text/javascript" src="{{ url_for('static', filename='./Solana Drink_files/vanilla-tilt.min.js.download') }}"></script>
@@ -216,14 +219,15 @@
     var description = "https://github.com/mirkan1";
     name_array = ["PotatoLimonato", "ChicalatoDeparsiano", "lil;"];
     var _name = name_array.filter(e => {if (Math.random() > 0.65) {return e;}})[0] || "UNKNOWN";
+    var palInt;
     //////////////////////////////////////////////////////////////////////////////////////////
     // PALETTE CONFIGS
     var px;
     var totalPalettes = [
-      // [ '#253a38','#7aa44d','#91ea3a','#d2deca',], //acidicGB
-      // [ "#102533","#42678e","#6f9edf","#cecece",], // bluePalette 
-      // [ "#191930", "#263d6e", "#2f729e", "#eba254", "#f5d689", "#fff5d9",], // vintage voltage
-      ["#2a1e42","#2d2640","#353b4d","#4e5075","#75619c","#a184bd","#ae9cd6","#a099cc","#817dbd","#7676a3","#5f7094","#495182","#343166","#1f1f57","#421b4a","#6b2b61","#872f4f","#a82828","#d44c2a","#d9894c","#dea76d","#e8d899","#f0f5c7","#ccdbb8","#8dab89","#79947d","#708078","#4e6160","#38464d","#2c3545","#373a5e","#535280","#807594","#a2a2b0","#c3c8d6","#dfe5f5","#e5f5ff",] // CYBER-37
+      [ '#253a38','#7aa44d','#91ea3a','#d2deca',], //acidicGB
+      [ "#102533","#42678e","#6f9edf","#cecece",], // bluePalette 
+      [ "#191930", "#263d6e", "#2f729e", "#eba254", "#f5d689", "#fff5d9",], // vintage voltage
+      // ["#2a1e42","#2d2640","#353b4d","#4e5075","#75619c","#a184bd","#ae9cd6","#a099cc","#817dbd","#7676a3","#5f7094","#495182","#343166","#1f1f57","#421b4a","#6b2b61","#872f4f","#a82828","#d44c2a","#d9894c","#dea76d","#e8d899","#f0f5c7","#ccdbb8","#8dab89","#79947d","#708078","#4e6160","#38464d","#2c3545","#373a5e","#535280","#807594","#a2a2b0","#c3c8d6","#dfe5f5","#e5f5ff",] // CYBER-37
         // [0,0,0],
         // [206,126,0],
         // [256,256,256],
@@ -364,6 +368,7 @@
         })
     }
     const askContractToMintNft = async () => {
+        // original suzanne NFT
         try {
             const { ethereum } = window;
             if (ethereum) {
@@ -383,6 +388,7 @@
             console.log(error)
         }
     }
+
     const nameUpdate = async (read = false) => {
         if (account == undefined) {
             document.querySelector("#info").innerText = "You need to connect to blochcain network first.";
@@ -396,21 +402,14 @@
             provider = new ethers.providers.Web3Provider(ethereum);
             signer = provider.getSigner();
             connectedContract = new ethers.Contract(CONTRACT_ADDRESS, abi.abi, signer);
-            // const nftContractFactory = await hre.ethers.getContractFactory('MyContract');
-            // const nftContract = await nftContractFactory.deploy();
-            // await nftContract.deployed();
             if (read) {
                 document.querySelector("#info").innerHTML += `<br><span style="color: green">RESPONSE:</span>` + await connectedContract.name();
             } else {
-            //     console.log(await connectedContract.name())
-            //     console.log(document.querySelector("#nameUpdateItem").value)
-            //     var mineing = await connectedContract.updateName(document.querySelector("#nameUpdateItem").value)
-            //     await waitAndUpdate(mineing, "#info")
-            //     console.log(await connectedContract.name())
             }
         }
         return;
     }
+
     const getRGBA = async () => {
         return false;
 
@@ -518,7 +517,8 @@
 
     const getNew128px = () => { 
       var mypalette = []; 
-      totalPalettes[Date.now()%totalPalettes.length].forEach(e => {
+      palInt = Date.now()%totalPalettes.length;
+      totalPalettes[palInt].forEach(e => {
           mypalette.push(hexToRgb(e))
       });
         const config = {
@@ -586,10 +586,10 @@
                 // },{
                 //     trait_type: "Name Lenght",
                 //     value: _name.length
-                // },{
-                //     trait_type: "Description Lenght",
-                //     value: description.length
-                // },
+                {
+                    trait_type: "palette",
+                    value: totalPalettes[palInt].join(":")
+                },
                 {
                   "display_type": "date", 
                   "trait_type": "birthday", 
@@ -622,9 +622,22 @@
         }
         await waitAndUpdate(nft_, "#info");
     }
+    function hide_console_Q1_task(state=true) {
+        if (state) {
+            document.getElementById("container").hidden = false;
+            // click one
+            // document.getElementById("min_max_button_x").click()
+            document.getElementById("min_max_button_sqr").click()
+            // document.getElementById("min_max_button_minus").click() 
+        } else {
+            document.getElementById("container").hidden = true;
+            document.getElementById("min_max_button_x").click()
+        }
+    }
 
     const INITIALIZE = async () => {
         loadData();
+        // hide_console_Q1_task(state=true);
         getNew128px();
         await getTotalCount();
     }
@@ -637,21 +650,17 @@
         } else if (text == "🔲") {
             // 🔲
             consoleStateOn()
+            event.target.parentElement.parentElement.hidden = false;
         } else {
             // ➖
             consoleStateOff()
+            event.target.parentElement.parentElement.hidden = false;
         }
-        // var stat_div = document.querySelector("#min_max_button");
-        // var minimize_icon =`<i class="fa-solid fa-arrows-minimize"></i>`
-        // var maximize_icon =`<i class="fa-solid fa-arrows-maximize"></i>`
-        //debugger;
-
-
     }
 
     function consoleStateOn() {
         var _console = document.querySelector("#info");
-        _console.parentElement.style.top = "65%"
+        _console.parentElement.style.top = "80%"
         _console.parentElement.style.position = 'fixed'
         _console.parentElement.style.zIndex = '500';
     }
@@ -673,6 +682,20 @@
             })
     }
     
+    // background-color mousevents
+    // This handler will be executed every time the cursor
+    // is moved over a different list item
+    document.querySelectorAll(".mint-btn").forEach( e => {
+        e.addEventListener("mouseover", function( event ) {
+          // highlight the mouseover target
+          event.target.style.color = "orange";
+
+          // reset the color after a short delay
+          setTimeout(function() {
+            event.target.style.color = "";
+          }, 500);
+        }, false);
+    });
     </script>
 <style>
 @media only screen and (max-width: 600px) {

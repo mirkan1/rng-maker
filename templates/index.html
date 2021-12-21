@@ -76,7 +76,7 @@
         align-items: center;
     ">
         <h2 style="letter-spacing: 2px;font-size: 2.5rem;margin-bottom: 1.5rem;">Create an NFT with your inputs and send it to your vallet with Opensea link<i class="fa-solid fa-monkey"></i></h2>
-        <div class="container" id="container" style="height: 500px; width:750px">
+        <div class="container" id="container" >
             <div class="form-container sign-in-container">
                 <form action="javascript:RBG_CHANGE({target:{id:'all'}})" style="align-items:baseline;">
                     <div class="flex-left-to-right">
@@ -355,6 +355,7 @@
         signer = provider.getSigner();
         connectedContract = new ethers.Contract(CONTRACT_ADDRESS, abi.abi, signer);
     }
+    
     const mintPredefinedNFT = async () => {
         if (account == undefined) {
             document.querySelector("#info").innerText = "You need to connect to blochcain network first.";
