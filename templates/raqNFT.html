@@ -569,6 +569,7 @@
     }
 
     const MintPixelArt = async () => {
+        document.querySelector('#min_max_button_sqr').click();
         img_base128 = document.querySelector("#pixelitcanvas").toDataURL("image/png");
         try {
             var unique_id = await connectedContract.totalCount();
