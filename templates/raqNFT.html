@@ -635,11 +635,11 @@
         }
     }
 
-    const INITIALIZE = async () => {
+    const INITIALIZE = () => {
         loadData();
         // hide_console_Q1_task(state=true);
         getNew128px();
-        await getTotalCount();
+        getTotalCount();
     }
 
     function consoleState(event) {
