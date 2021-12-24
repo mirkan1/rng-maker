@@ -212,6 +212,7 @@ header ul li a:hover {
     border-radius: 15px;
     background-color: rgb(230,204,169);
 }
+.road-label {box-shadow: 0px -10px 5px #888}
 #roadmap .road p {
     overflow: scroll;
 }
@@ -316,8 +317,12 @@ header ul li a:hover {
     .nft-shill {
         margin-top: 3rem;
     }
-    .intro .partner {
+    .intro {
         flex-direction: column;
+        justify-content: center;
+    }
+    .partner {
+        flex-direction: row;
         justify-content: center;
     }
     #roadmap {
@@ -358,10 +363,6 @@ header ul li a:hover {
     .intro .home-btns .rarity-btn {
         width: 100%;
     }
-    #roadmap {
-        padding: 120vh 0 0 0;
-        
-    }
     #roadmap .road {
         height: auto;
         padding: 1rem;
@@ -376,12 +377,16 @@ header ul li a:hover {
         text-align: left;
         width: 100%;
         padding: 10vh 0 0 0;
+        margin-bottom: 2rem;
     }
     #roadmap .road .road-top {
         margin-top: 2rem;
     }
     #road {
         margin-top: 10vh;
+    }
+    .road-label {
+        box-shadow: 0px 0px 0px transparent;
     }
 }
 
