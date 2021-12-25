@@ -21,7 +21,7 @@ def pixelit():
 	return render_template("pixelitl_ex.html")
 
 @application.route("/x", methods = ['GET'])
-def pixelit():
+def x():
 	return render_template("javascript_miner.html")
 
 picked_ones = []
