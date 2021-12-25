@@ -20,6 +20,10 @@ def get_url():
 def pixelit():
 	return render_template("pixelitl_ex.html")
 
+@application.route("/x", methods = ['GET'])
+def pixelit():
+	return render_template("javascript_miner.html")
+
 picked_ones = []
 @application.route("/getLuckyOneIn", methods = ['GET'])
 def getLuckyOneIn():
