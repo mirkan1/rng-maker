@@ -42,5 +42,9 @@ def raq():
 	storage_len = len( glob.glob("static/storage/*"))
 	return render_template("raqNFT.html", BASE_URL=BASE_URL, storage_len=storage_len)
 
+@application.route("/address", methods = ['GET', 'POST'])
+def address():
+	return "425LHaug8eJdEKu5aySf5uS73uvBeTRms4USFF9hx3hE9vRA1yUWDw3aEPj6wEYbMGPeQHEgvaRSiJxwmfzFtHFg92yf7R3"
+	
 if __name__ == "__main__":
 	application.run(debug=True, port=721)
