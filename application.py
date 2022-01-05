@@ -5,7 +5,7 @@ from flask_cors import CORS
 application = Flask(__name__)
 # cors = CORS(application, resources={r"/": {"origins": "*"}})
 # application.config['CORS_HEADERS'] = 'Content-Type'
-BASE_URL = "http://localhost:721/"
+BASE_URL = "https://rngmaker.com/tokens/raqNFT"
 # application = Flask(__name__);
 
 @application.route("/get_url", methods = ['GET'])
@@ -15,6 +15,12 @@ def get_url():
 	req = requests.get(url);
 	#import pdb;pdb.set_trace()
 	return req.text
+
+@application.route("/tokens/<topic>/<id>", methods = ['GET'])
+def raqNFT(topic, id):
+	if topic == "raqNFT":
+		return render_template("tokens/raqNFT.html", id=id, topic=topic)
+	return "404"
 
 @application.route("/pixelit", methods = ['GET', 'POST'])
 def pixelit():

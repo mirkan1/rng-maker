@@ -44,20 +44,20 @@
         <ul>
             <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
             <li><a href="#roadmap"><i class="fas fa-map-pin"></i> Roadmap</a></li>
-            <li><a href="#" class="account_info" onclick="checkIfWalletIsConnected()"><i class="fa-solid fa-wallet"></i> Connect</a></li>
+            <li><a href="javascript:void(0)" class="account_info" onclick="checkIfWalletIsConnected()"><i class="fa-solid fa-wallet"></i> Connect</a></li>
         </ul>
         <div class="burger"><i class="fas fa-bars"></i></div>
     </header>
     <div class="slide-menu" style="left: -100%; padding-top:10%">
         <a href="#"><i class="fas fa-home"></i> Home</a>
         <a href="#roadmap"><i class="fas fa-map-pin"></i> Roadmap</a>
-        <a href="#" class="account_info" onclick="checkIfWalletIsConnected()"><i class="fa-solid fa-wallet"></i> Connect</a>
+        <a href="javascript:void(0)" class="account_info" onclick="checkIfWalletIsConnected()"><i class="fa-solid fa-wallet"></i> Connect</a>
     </div>
     <div id="home">
         <div class="intro">
-            <h2>raqnft<i class="fa-solid fa-monkey"></i></h2>
-            <h2 style="color: red; background-color: black;">BETA POLYGON MUMBAI SERVER<br>Matic network launch is at JANUARY 9, 2022 (Sunday)</h2>
-            <!-- -->
+            <br><br><br>
+            <h2 style="color: red; background-color: #102533;">PRESALE IS LIVE NOW</h2>
+            <!-- <br>Matic network launch is at JANUARY 9, 2022 (Sunday) -->
             <div class="container container__">
               <div id="countdown" style="">
                 <ul>
@@ -72,6 +72,13 @@
               </div>
             </div>
             <style type="text/css">
+                .timeSpan {
+                  cursor: pointer;
+                }
+                .timeSpan:hover {
+                  background: orange;
+                  box-shadow: 6px -16px #102533;
+                }
                 .container__ {
                   color: #333;
                   margin: 0 auto;
@@ -87,9 +94,6 @@
                 }
 
                 .timerLi .timeSpan {
-/*                  background: #f8e1c2;
-                  border: azure;
-                  border-radius: 16px;*/
                   display: block;
                   font-size: 4.5rem;
                 }
@@ -212,10 +216,9 @@
             <div class="road-label road-top">
                 <h3 id="pixel-modern-art">Q4 2021 - Background data cards</h3>
             </div>
-            <div style="display:flex;flex-direction: row;gap: 50px; margin: 0 25px 25px 25px;">
-                <div style="align-items: center;
-    display: flex;">
-                <img src="#" alt="background card photo">
+            <div style="display:flex;flex-direction: row;gap: 50px; margin: 0 25px 25px 25px;width:100%">
+                <div style="align-items: center;display: flex; border: 5px solid white; height: fit-content;padding: 5px;">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHZpZXdCb3g9IjAgMCAzNTAgMzUwIj4gICAgICAgICAgICAgICAgICAgICAgICA8c3R5bGU+LmJhc2UgeyBmaWxsOiB3aGl0ZTsgZm9udC1mYW1pbHk6IHNlcmlmOyBmb250LXNpemU6IDE1cHg7IH08L3N0eWxlPiAgICAgICAgICAgICAgICAgICAgICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InJnYigxMzMsMTMzLDEzMykiPjwvcmVjdD4gICAgICAgICAgICAgICAgICAgICAgICA8dGV4dCBpZD0ibmFtZV9wbGF0ZSIgeD0iNSUiIHk9IjIwJSIgY2xhc3M9ImJhc2UiIGRvbWluYW50LWJhc2VsaW5lPSJyaWdodCIgdGV4dC1hbmNob3I9InJpZ2h0IiBzdHlsZT0iZm9udC1zaXplOiAxMzMuN3B4OyI+MTMzNzwvdGV4dD4gICAgICAgICAgICAgICAgICAgICAgICA8dGV4dCBpZD0iZGVzY3JpcHRpb25fcGxhdGUiIHg9IjUlIiB5PSI0MCUiIGNsYXNzPSJiYXNlIiBkb21pbmFudC1iYXNlbGluZT0icmlnaHQiIHRleHQtYW5jaG9yPSJyaWdodCIgc3R5bGU9ImZvbnQtc2l6ZTogMTMzLjdweDsiPjEzMzc8L3RleHQ+ICAgICAgICAgICAgICAgICAgICA8L3N2Zz4=" alt="background card photo" width="128px" height="128px">
                 </div>
                 <p>This is your data card. Mint it into your wallet on matic/polygon network for 10 MATIC<br>>> base64 format<br>>> NFT limit is 2000</p>
             </div>
@@ -228,11 +231,12 @@
             <div class="road-label road-top">
                 <h3 id="pixel-modern-art">Q1 2022 - Glitches</h3>
             </div>
-            <div style="display:flex;flex-direction: row;gap: 50px; margin: 0 25px 25px 25px;">
-                <div style="align-items: center;display: flex; border: 5px solid white;">
-                    <canvas id="pixelitcanvas" crossorigin="anonymous" width="128px" height="128px"></canvas>
+            <div style="display:flex;flex-direction: row;gap: 50px; margin: 0 25px 25px 25px; align-items: center;width:100%">
+                <div style="align-items: center;display: flex; border: 5px solid white; height: fit-content;padding: 5px;">
+                    <img id="artLoadingImage" src="{{ url_for('static', filename='gif/Spinner-1s-200px.gif') }}" width="128px" height="128px">
+                    <canvas id="pixelitcanvas" crossorigin="anonymous" width="128px" height="128px" hidden></canvas>
                 </div>
-                <p>Mint this Glitch which is generated by AI into your wallet on matic/polygon network for 10 MATIC<br>>> base64 format<br>>> NFT limit is 2000</p>
+                <p>Mint this Glitch on the left. It is being generated each time when you visit this website and using an AI</br>Mint it into your wallet on matic/polygon network for 10 MATIC<br>>> base64 format<br>>> NFT limit is 2000</p>
             </div>
             <div>
                 <button class="mint-btn" style="background-color: #102533;margin-bottom: 5px;border: 3px solid #e6cca9;" onclick="MintPixelArt()" id="MintPixelArt_button"><span style="color:#e6cca9; display:flex; "><i class="fas fa-hammer"></i>&nbsp;MINT</span></button>
@@ -262,19 +266,23 @@
     <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
     <script src="{{ url_for('static', filename='js/pixelit.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js" type="application/javascript"></script>
-    <script>
+<script>
     // MAIN SCRIPT
     const BASE_URL = `{{ BASE_URL }}`;
     var balance, abi, web3Connected, chanId_int, account, connectedContract, provider, signer
-    var CONTRACT_ADDRESS = "0xb056f570a2Be4CDfA144a143EB52DC7EdF116519";
-    const chainIdInt = 80001;
-    const chainId = '0x'+chainIdInt.toString(16);console.log(chainId)
-    const SCAN = "https://mumbai.polygonscan.com/tx/";
-    const openSeaPrefix = "https://testnets.opensea.io/assets/mumbai/"
+    var MATIC_CONTRACT = "0xc4d4319a3348C2e935838Ae6e1B5b2d9Dbe0e566";
+    var CONTRACT_ADDRESS = "0x533AC8Bb595F1670D866A04229C96a29D00345E4";
+    CONTRACT_ADDRESS = MATIC_CONTRACT;
+    // XXX ?? polygon matic network
+    const chainIdInt = 137//80001; // 
+    const chainId = '0x'+chainIdInt.toString(16);
+    const SCAN = "https://polygonscan.com/tx/"//"https://mumbai.polygonscan.com/tx/";
+    // XXX testnets
+    const openSeaPrefix = "https://opensea.io/assets/matic/"//"https://testnets.opensea.io/assets/mumbai/"
     const saleNetwork = "polygon/matic";
-    const networkCurrency  = saleNetwork == "polygon/matic" ? "MATIC" : "ETH"
-    const rariblePrefix = "https://rinkeby.rarible.com/token/"
-    // const cost = 
+    const networkCurrency = saleNetwork == "polygon/matic" ? "MATIC" : "ETH"
+    const rariblePrefix = "nan"//"https://rarible.com/token/";
+    console.log(chainIdInt, chainId, saleNetwork);
     //////////////////////////////////////////////////////////////////////////////////////////
     // data:image/svg+xml;base64,               || SVG
     // data:application/json;base64,            || JSON
@@ -290,17 +298,180 @@
     //////////////////////////////////////////////////////////////////////////////////////////
     // PALETTE CONFIGS
     var px;
+//////////////////////////////////////////////////////////////////////////////
+    // // https://www.pixilart.com/palettes
+    // var _arr_= [];
+    // document.querySelectorAll("div").forEach(e=>{
+    //     let dataColors = e.getAttribute("data-colors");
+    //     if (dataColors) {
+    //         arr_.push(dataColors.split(",").map(e=>"#"+e))
+    //     }
+    // });
+//////////////////////////////////////////////////////////////////////////////
     var totalPalettes = [
       [ '#253a38','#7aa44d','#91ea3a','#d2deca',], //acidicGB
       [ "#102533","#42678e","#6f9edf","#cecece",], // bluePalette 
       [ "#191930", "#263d6e", "#2f729e", "#eba254", "#f5d689", "#fff5d9",], // vintage voltage
-      // ["#2a1e42","#2d2640","#353b4d","#4e5075","#75619c","#a184bd","#ae9cd6","#a099cc","#817dbd","#7676a3","#5f7094","#495182","#343166","#1f1f57","#421b4a","#6b2b61","#872f4f","#a82828","#d44c2a","#d9894c","#dea76d","#e8d899","#f0f5c7","#ccdbb8","#8dab89","#79947d","#708078","#4e6160","#38464d","#2c3545","#373a5e","#535280","#807594","#a2a2b0","#c3c8d6","#dfe5f5","#e5f5ff",] // CYBER-37
-        // [0,0,0],
-        // [206,126,0],
-        // [256,256,256],
-        // [106,50,159],
-        // // [204,0,0],
-        // [26,28,44],[93,39,93],[177, 62, 83],[239, 125, 87],[255, 205, 117],[167, 240, 112],[56, 183, 100],[37, 113, 121],[41, 54, 111],[59, 93, 201],[65, 166, 246],[115, 239, 247],[244, 244, 244],[148, 176, 194],[86, 108, 134],[51, 60, 87]
+      ['#61D163', '#253B46', '#188660', '#EBE7AD'],
+      ['#00303B', '#011133', '#EB774D', '#FFCE96'],
+      ['#7E8EA7', '#6571A1', '#485881', '#3C3A56'],
+      ['#86EA16', '#080808', '#9FF179', '#363636'],
+      ['#FFFAFA', '#E64B5B', '#417199', '#FFF2D5'],
+      ['#EEF5E4', '#9FF179', '#575268', '#282336'],
+      ['#000402', '#0505FD', '#F4FD05', '#FD0505'],
+      ['#000000', '#D41717', '#9BA6F8', '#F8ACD7'],
+      ['#40548C', '#0B1227', '#ADDAFC', '#F7DEBB'],
+      ['#923A3A', '#FF9191', '#FFC84E', '#FFEB9F'],
+      ['#F6F0ED', '#C2948A', '#28546B', '#7EA8BE'],
+      ['#F29C6A', '#F4C88B', '#569191', '#D3CBBF'],
+      ['#7B0000', '#007B00', '#333333', '#888888'],
+      ['#122717', '#479B5B', '#1A3B66', '#E1E3E6'],
+      ['#000000', '#FFFA02', '#D8D596', '#AFACAB'],
+      ['#FF9B00', '#000000', '#5F248C', '#7C7777'],
+      ['#010B4E', '#7483E3', '#000000', '#450707'],
+      ['#EADFC8', '#C6A99D', '#9F9F85', '#788177'],
+      ['#911717', '#D50000', '#C9770C', '#A85A00'],
+      ['#FF0000', '#4E0089', '#00BDFF', '#1100FF'],
+      ['#FF6363', '#FFA963', '#FCFA95', '#B1FC95'],
+      ['#850505', '#DBD8DB', '#520000', '#9DC223'],
+      ['#322525', '#FCDFDF', '#E500FF', '#000000'],
+      ['#194D33', '#000000', '#5AC1FF', '#FF7200'],
+      ['#000000', '#FFFFFF', '#9E9E9E', '#7B1FA2'],
+      ['#BDBDBD', '#FFFFFF', '#000000', '#C6FF00'],
+      ['#81D4FA', '#BDBDBD', '#757575', '#FFFFFF'],
+      ['#051F39', '#4A2480', '#C53A9D', '#FF8E80'],
+      ['#36394F', '#74568C', '#C27183', '#FFEBA8'],
+      ['#642A78', '#432051', '#B8BEDB', '#8E93AB'],
+      ['#000000', '#FF5722', '#FF9800', '#F44336'],
+      ['#231FD6', '#0064FF', '#00A4FF', '#00F6FF'],
+      ['#1E1E81', '#1265DE', '#7D7412', '#4E4A42'],
+      ['#DCEDEB', '#90ADBB', '#56689D', '#262238'],
+      ['#162544', '#843A9D', '#DA6092', '#FFFCBB'],
+      ['#83628C', '#C394AF', '#EEC5B4', '#FFF0C8'],
+      ['#FDE5D1', '#F1C893', '#A0A472', '#4A6D74'],
+      ['#00FF7F', '#00FFF7', '#0091FF', '#5300FF'],
+      ['#51C254', '#4CAF4F', '#409943', '#3B8C3C'],
+      ['#2977FF', '#1565C0', '#F8BBD0', '#18FFFF'],
+      ['#FFD9AD', '#B5654F', '#E4A877', '#854424'],
+      ['#B0BEC5', '#90A4AE', '#78909C', '#607D8B'],
+      ['#FF0000', '#00FFC5', '#000000', '#073676'],
+      ['#BDBDBD', '#FAFAFA', '#FFFFFF', '#212121'],
+      ['#564756', '#507DBA', '#5ACCA0', '#E5F7D2'],
+      ['#1A2129', '#312137', '#512839', '#713141'],
+      ['#F3BF7C', '#D0021B', '#FFFFFF', '#66BC0A'],
+      ['#061228', '#234580', '#4C7CCF', '#C3E7FF'],
+      ['#0F0D2A', '#E34965', '#49BCE3', '#FBE76B'],
+      ['#2D162C', '#412752', '#683A68', '#9775A6'],
+      ['#8A0303', '#FF8D85', '#C37C4D', '#606373'],
+      ['#194D33', '#2AC779', '#89E76A', '#C3F87B'],
+      ['#120F0F', '#382C2A', '#653F26', '#B9AC3B'],
+      ['#FFFFFF', '#E5BB00', '#5E5393', '#000000'],
+      ['#CA463C', '#629AC2', '#FFF200', '#375EB3'],
+      ['#A9A8FF', '#5F6387', '#003073', '#D357B4'],
+      ['#B50B0B', '#EFD885', '#FFFFFF', '#94077F'],
+      ['#091646', '#000000', '#FFFFFF', '#010F5D'],
+      ['#1FB81F', '#4C1A14', '#FFFFFF', '#D1B671'],
+      ['#DBC89F', '#E1AA6B', '#090987', '#F1AEFC'],
+      ['#FFFFFF', '#FFB612', '#E31837', '#000000'],
+      ['#D2E7AF', '#5ADED9', '#2979B6', '#081935'],
+      ['#EBE6DD', '#C19686', '#9C4F4F', '#3D373E'],
+      ['#FFFFFF', '#00E1FF', '#FF00FF', '#000000'],
+      ['#FF9E9A', '#FFA39F', '#FF9995', '#FF605A'],
+      ['#074B29', '#614E49', '#01BDFE', '#FEEC01'],
+      ['#000000', '#DBA879', '#928EB9', '#DFE8F1'],
+      ['#E18A15', '#EB3333', '#D39F00', '#01ABB1'],
+      ['#F0D1FF', '#C2F0D9', '#DEF0C2', '#F0C2C2'],
+      ['#194D33', '#4A90E2', '#C194FF', '#FFB3F3'],
+      ['#3C09F5', '#513F90', '#80469C', '#66355B'],
+      ['#FF9DF4', '#1F95FF', '#FF0F42', '#FF0000'],
+      ['#422E31', '#875D51', '#B59070', '#D6C894'],
+      ['#004D40', '#000000', '#546E7A', '#607D8B'],
+      ['#F8142C', '#1485F8', '#F814AE', '#F8A714'],
+      ['#00FFFB', '#00C773', '#00417D', '#13002C'],
+      ['#252525', '#000000', '#FFFFFF', '#524B4B'],
+      ['#D4E9FD', '#B6DCF3', '#7DC5EE', '#4AA8F6'],
+      ['#FF0000', '#00FFCD', '#0AFF53', '#B200FF'],
+      ['#000000', '#FFFFFF', '#676767', '#B6B6B6'],
+      ['#EEE1BC', '#DDB57D', '#AD764E', '#342316'],
+      ['#D0021B', '#11FF0A', '#CEFF00', '#000000'],
+      ['#AC8CF0', '#E8E7FA', '#5A66D8', '#C2CCF7'],
+      ['#000000', '#752E37', '#F67E7D', '#FFB997'],
+      ['#ECD4D7', '#B1B3C8', '#A393B2', '#BCA4A4'],
+      ['#4B1F29', '#862038', '#F18D51', '#F8D2AC'],
+      ['#000000', '#C9D4B9', '#4CAF4F', '#BED1A5'],
+      ['#FF0000', '#00BFFF', '#000000', '#FFFFFF'],
+      ['#FFEFFF', '#F7B58C', '#84739C', '#181010'],
+      ['#7DA1D4', '#E8BC90', '#F47697', '#8D8EA6'],
+      ['#C6EBC9', '#70AF85', '#F0E2D0', '#AA8976'],
+      ['#121013', '#4D375D', '#EB596E', '#FFE227'],
+      ['#000000', '#730606', '#061F73', '#99852E'],
+      ['#EFD8A1', '#3C9F9C', '#276468', '#183F39'],
+      ['#1AE985', '#063D21', '#E4ECE9', '#000000'],
+      ['#194D33', '#3CB59A', '#9013FE', '#B017CF'],
+      ['#1A1A2E', '#16213E', '#0F3460', '#E94560'],
+      ['#68EBA9', '#0E724B', '#286121', '#78AD38'],
+      ['#FBF8AB', '#FCD7EB', '#000000', '#256602'],
+      ['#E0D7C3', '#3F352D', '#7B8779', '#9E3C32'],
+      ['#FF9B00', '#000000', '#FFEB00', '#85FB03'],
+      ['#373850', '#7E509F', '#628F8E', '#7EA8BA'],
+      ['#194D33', '#D3F1E1', '#24E97A', '#FB7B7B'],
+      ['#FA232A', '#FA2347', '#0A0412', '#1B285C'],
+      ['#73441C', '#6B6969', '#8C8C89', '#BD9317'],
+      ['#000000', '#E65100', '#FFCD94', '#3E2723'],
+      ['#F4ECEC', '#F4DB9B', '#060202', '#285FCA'],
+      ['#00E6FF', '#18FFFF', '#E57373', '#EF9A9A'],
+      ['#8C4977', '#C45A6A', '#D69489', '#DBD9C5'],
+      ['#521296', '#8A1FAC', '#D4864A', '#EBDB5E'],
+      ['#FFC508', '#302F2C', '#E8E8E8', '#F77BED'],
+      ['#F9C6E4', '#D3F8FF', '#180742', '#FFE7CC'],
+      ['#C71F33', '#9C5960', '#BF8421', '#C3B82C'],
+      ['#A9584C', '#F7E8A1', '#EB804C', '#042C3B'],
+      ['#4D0845', '#841277', '#D91FC3', '#FF23E3'],
+      ['#57B3CF', '#3986A6', '#2C5484', '#1D3663'],
+      ['#000000', '#BDBDBD', '#757575', '#424242'],
+      ['#33B4B4', '#3377C3', '#5533D2', '#BB33E1'],
+      ['#BDE5FF', '#00E6FF', '#A2C5DB', '#000000'],
+      ['#3E1404', '#6A2B05', '#964315', '#BB6B24'],
+      ['#83C0E4', '#5E96C7', '#424B99', '#1E194D'],
+      ['#3F51B5', '#8BC34A', '#FFEB3B', '#000000'],
+      ['#71CAC8', '#4A818D', '#EDF6E9', '#9D7AA4'],
+      ['#CADFFA', '#87B0D7', '#F7F5F5', '#193E6C'],
+      ['#2A8037', '#001B27', '#F7FFB7', '#A5D145'],
+      ['#3CBDFE', '#503000', '#FAD778', '#000000'],
+      ['#194D33', '#3EF499', '#3EF4F4', '#B33EF4'],
+      ['#8FB7EC', '#5E99ED', '#3C7DEF', '#0052E9'],
+      ['#5C8F5A', '#1C3023', '#1E3635', '#484D24'],
+      ['#FFE6D3', '#FFF1E0', '#FFEEDA', '#FFE1DA'],
+      ['#D69BAD', '#F8D074', '#B64C56', '#86616D'],
+      ['#F9FFB2', '#ABCC47', '#3D8026', '#00141A'],
+      ['#B2FF59', '#8BC34A', '#4CAF50', '#00C853'],
+      ['#194D33', '#421717', '#F8CB0E', '#83237C'],
+      ['#A58FB2', '#EEE6DD', '#C68A8A', '#8491CC'],
+      ['#101111', '#69AAAA', '#4A90E2', '#50E3C2'],
+      ['#F67280', '#C06C84', '#6C5B7B', '#355C7D'],
+      ['#522D5B', '#D7385D', '#FB7C6B', '#E7D39F'],
+      ['#582600', '#311500', '#C18556', '#866249'],
+      ['#FFFDB7', '#FFF500', '#FFB15C', '#FF8600'],
+      ['#40FF9F', '#F571E2', '#C671F5', '#FF5757'],
+      ['#79A2D0', '#F094BE', '#F0C289', '#EDE5D5'],
+      ['#D3AFEC', '#ECAFE5', '#CDECAF', '#ECD0AF'],
+      ['#071821', '#306850', '#86C06C', '#E0F8CF'],
+      ['#00FF81', '#7171AB', '#A171AE', '#B27F8A'],
+      ['#000000', '#18FFC3', '#03CFC0', '#67FFC3'],
+      ['#E6E6FA', '#D8BFD8', '#DDA0DD', '#EE82EE'],
+      ['#194D33', '#15D977', '#ACD915', '#8617F7'],
+      ['#FFF2E2', '#FFEDD5', '#734822', '#613D1D'],
+      ['#4A828C', '#4A5D8C', '#5F4A8C', '#90A694'],
+      ['#A3BDD8', '#ABA3D8', '#BFA3D8', '#D8A3D6'],
+      ['#FFC000', '#3E2929', '#FE5500', '#5D5149'],
+      ['#194D33', '#4D2D19', '#F98438', '#AA412B'],
+      ['#3A2D3B', '#544061', '#4C4796', '#3A68AC'],
+      ['#FF9E00', '#FFAF28', '#FFC15C', '#FFD894'],
+      ['#0F380F', '#306230', '#8BAC0F', '#9BBC0F'],
+      ['#0B678F', '#128FC7', '#4999BC', '#032C40'],
+      ['#004333', '#0D8833', '#A1BC00', '#EBDD77'],
+      ['#FFB8B8', '#E6D3FF', '#BBE7F5', '#FBD4AB'],
+      ['#04FF80', '#0BEB7A', '#2BC477', '#1C6540'],
     ]
     var acidicGB = [ '#253a38','#7aa44d','#91ea3a','#d2deca',];
     var bluePalette = [ "#102533","#42678e","#6f9edf","#cecece",];
@@ -358,6 +529,16 @@
         }
     }
 
+    // LAUNCH
+    // revelIt();
+    const revelIt = async () => {
+        await connectedContract.reveal();
+    }
+    // setOnlyWhitelisted(false);
+    const setOnlyWhitelisted = async (_state) => {
+        await connectedContract.setOnlyWhitelisted(_state);
+    }
+
     const askContractToMintNftwithInputs = async () => {
         var _souce = document.querySelector("svg").outerHTML
                             .replace(/[\n]/g, "")
@@ -370,14 +551,6 @@
                         )
                     )
                 );
-
-        // {
-        //   "description": "Friendly OpenSea Creature that enjoys long swims in the ocean.", 
-        //   "external_url": "https://openseacreatures.io/3", 
-        //   "image": "https://storage.googleapis.com/opensea-prod.appspot.com/puffs/3.png", 
-        //   "name": "Dave Starbelly",
-        //   "attributes": [ ... ], 
-        // }
         var unique_id = await connectedContract.totalCount();
         var nftData = {
             attributes: [
@@ -404,7 +577,7 @@
             name: _name,
             description: description,
             image: image,
-            external_link: `${BASE_URL}token/${parseInt(unique_id) + 1}`
+            external_link: `${BASE_URL}/${parseInt(unique_id)}`
         }
         var b64 = btoa(unescape(encodeURIComponent(
             JSON.stringify(nftData)
@@ -418,35 +591,40 @@
         console.log(JSON.stringify(nftData), str)
         return b64;
     }
+    // var _COUNTER_ = 1;
     const waitAndUpdate = async (Txn, innerHTMLid) => {
         let dotter = setInterval(() => {
+            if (document.querySelector(innerHTMLid).innerText.length > 100) {
+                // _COUNTER_++
+                document.querySelector(innerHTMLid).innerText = "Transaction is going to be sent, It might take some time.";
+            }
             document.querySelector(innerHTMLid).innerText += "."
         }, 500)
         await Txn.wait()
-        .then( async (tx) => {
-            console.log(tx)
-            // tnxLink = `https://rinkeby.etherscan.io/tx/${r.transactionHash}`;
-            var length = await lengthOfStorage()// + parseInt(1);
-            var openSeaLink = openSeaPrefix + CONTRACT_ADDRESS + "/" + length;
-            document.querySelector("#info").innerHTML = `SCAN      || Mined, see transaction:<a href="${SCAN}${tx.transactionHash}" target="blank_" style="color: cornflowerblue; font-size:20px">${SCAN}</a><br>`;
-            document.querySelector("#info").innerHTML += `Opensea   || Delayed history of metadata:<a href="${openSeaLink}" target="blank_" style="color: cornflowerblue; font-size:20px">Opensea</a><br>`;
-            document.querySelector("#info").innerHTML += `Raible    || See your NFT! on raible:<a href="${rariblePrefix}${CONTRACT_ADDRESS}/${length}" target="blank_" style="color: cornflowerblue; font-size:20px">Raible</a><br>`;
-            clearInterval(dotter);
-        })
+            .then( async (tx) => {
+                console.log(tx)
+                // tnxLink = `https://rinkeby.etherscan.io/tx/${r.transactionHash}`;
+                var length = await lengthOfStorage()// + parseInt(1);
+                var openSeaLink = openSeaPrefix + CONTRACT_ADDRESS + "/" + String(length-1);
+                document.querySelector("#info").innerHTML = `SCAN      || Mined, see transaction: <a href="${SCAN}${tx.transactionHash}" target="blank_" style="color: cornflowerblue; font-size:20px">${tx.transactionHash}</a><br>`;
+                document.querySelector("#info").innerHTML += `Opensea   || Delayed history of metadata: <a href="${openSeaLink}" target="blank_" style="color: cornflowerblue; font-size:20px">Opensea</a><br>`;
+                // document.querySelector("#info").innerHTML += `Raible    || See your NFT! on raible:<a href="${rariblePrefix}${CONTRACT_ADDRESS}/${length}" target="blank_" style="color: cornflowerblue; font-size:20px">Raible</a><br>`;
+                clearInterval(dotter);
+            })
     }
     const askContractToMintNft = async () => {
         // original suzanne NFT
         try {
             const { ethereum } = window;
             if (ethereum) {
-                const provider = new ethers.providers.Web3Provider(ethereum);
-                const signer = provider.getSigner();
+                provider = new ethers.providers.Web3Provider(ethereum);
+                signer = provider.getSigner();
                 connectedContract = new ethers.Contract(CONTRACT_ADDRESS, abi.abi, signer);
                 document.querySelector("#info").innerText = "Going to pop wallet now to pay gas...";
                 let overrides = {
                     value: await connectedContract.cost()//ethers.utils.parseEther("10")
                 };
-                let nftTxn = await connectedContract.makeAnEpicNFT("ewogICAgIm5hbWUiOiAic2Vjb25kYXJ5IiwKICAgICJkZXNjcmlwdGlvbiI6ICJBIHNpbGVudCBoZXJvLiBBIHdhdGNoZnVsIHByb3RlY3Rvci4iLAogICAgImltYWdlIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaUlIQnlaWE5sY25abFFYTndaV04wVW1GMGFXODlJbmhOYVc1WlRXbHVJRzFsWlhRaUlIWnBaWGRDYjNnOUlqQWdNQ0F6TlRBZ016VXdJajRLSUNBZ0lEeHpkSGxzWlQ0dVltRnpaU0I3SUdacGJHdzZJSGRvYVhSbE95Qm1iMjUwTFdaaGJXbHNlVG9nYzJWeWFXWTdJR1p2Ym5RdGMybDZaVG9nTVRSd2VEc2dmVHd2YzNSNWJHVStDaUFnSUNBOGNtVmpkQ0IzYVdSMGFEMGlNVEF3SlNJZ2FHVnBaMmgwUFNJeE1EQWxJaUJtYVd4c1BTSmliR0ZqYXlJZ0x6NEtJQ0FnSUR4MFpYaDBJSGc5SWpVd0pTSWdlVDBpTlRBbElpQmpiR0Z6Y3owaVltRnpaU0lnWkc5dGFXNWhiblF0WW1GelpXeHBibVU5SW0xcFpHUnNaU0lnZEdWNGRDMWhibU5vYjNJOUltMXBaR1JzWlNJK1JYQnBZMHh2Y21SSVlXMWlkWEpuWlhJOEwzUmxlSFErQ2p3dmMzWm5QZz09Igp9", overrides=overrides);
+                let nftTxn = await connectedContract.mint(1, false, "ewogICAgIm5hbWUiOiAic2Vjb25kYXJ5IiwKICAgICJkZXNjcmlwdGlvbiI6ICJBIHNpbGVudCBoZXJvLiBBIHdhdGNoZnVsIHByb3RlY3Rvci4iLAogICAgImltYWdlIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjRiV3h1Y3owaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNQzl6ZG1jaUlIQnlaWE5sY25abFFYTndaV04wVW1GMGFXODlJbmhOYVc1WlRXbHVJRzFsWlhRaUlIWnBaWGRDYjNnOUlqQWdNQ0F6TlRBZ016VXdJajRLSUNBZ0lEeHpkSGxzWlQ0dVltRnpaU0I3SUdacGJHdzZJSGRvYVhSbE95Qm1iMjUwTFdaaGJXbHNlVG9nYzJWeWFXWTdJR1p2Ym5RdGMybDZaVG9nTVRSd2VEc2dmVHd2YzNSNWJHVStDaUFnSUNBOGNtVmpkQ0IzYVdSMGFEMGlNVEF3SlNJZ2FHVnBaMmgwUFNJeE1EQWxJaUJtYVd4c1BTSmliR0ZqYXlJZ0x6NEtJQ0FnSUR4MFpYaDBJSGc5SWpVd0pTSWdlVDBpTlRBbElpQmpiR0Z6Y3owaVltRnpaU0lnWkc5dGFXNWhiblF0WW1GelpXeHBibVU5SW0xcFpHUnNaU0lnZEdWNGRDMWhibU5vYjNJOUltMXBaR1JzWlNJK1JYQnBZMHh2Y21SSVlXMWlkWEpuWlhJOEwzUmxlSFErQ2p3dmMzWm5QZz09Igp9", overrides=overrides);
                 await waitAndUpdate(nftTxn, "#info");
             } else {
                 document.querySelector("#info").innerText = "Ethereum object doesn't exist!";
@@ -525,7 +703,11 @@
         }
         provider = new ethers.providers.Web3Provider(ethereum);
         signer = provider.getSigner();
-        connectedContract = new ethers.Contract(CONTRACT_ADDRESS, abi.abi, signer);
+        try {
+            connectedContract = new ethers.Contract(CONTRACT_ADDRESS, abi.abi, signer);
+        } catch (e) {
+            return await checkIfWalletIsConnected();
+        }
     }
 
     const mintPredefinedNFT = async () => {
@@ -539,25 +721,54 @@
         const { ethereum } = window;
         if (ethereum) {
             document.querySelector("#info").innerText = "Connected to ethereum network."
-            const provider = new ethers.providers.Web3Provider(ethereum);
-            const signer = provider.getSigner();
+            provider = new ethers.providers.Web3Provider(ethereum);
+            signer = provider.getSigner();
             const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, abi.abi, signer);
-            // var name_plate = document.querySelector("#name_plate").innerHTML;
-            // var RGB_plate = // document.querySelector("#RGB_plate").innerHTML;
-            // console.log(name_plate, RGB_plate)
-            document.querySelector("#info").innerText = "Oo...";
-            /// TODO
+            document.querySelector("#info").innerText = "Transaction is going to be sent, It might take some time.";
             let main_data = await askContractToMintNftwithInputs();
             let overrides = {
                 value: await connectedContract.cost() // ethers.utils.parseEther("0.1")
             };
-            var nft_ = await connectedContract.makeAnEpicNFT(main_data, overrides);
+            document.querySelector("#mintPredefinedNFT_button").disabled = true;
+            document.querySelector("#mintPredefinedNFT_button").style['background'] = "grey";
+            if ( await connectedContract.owner() == ethers.utils.getAddress(account) || (await connectedContract.onlyWhitelisted() && await connectedContract.isWhitelisted(account)) ) {
+                try {
+                    nft_ = await connectedContract.mint(1, false, main_data);
+                } catch (e) {
+                    if (e.code == 4001) {
+                        document.querySelector("#info").innerHTML = '<span style="color:red"><b>⚡⚡ ' + e.message + ' ⚡⚡</b></span>';
+                        return;
+                    }
+                    document.querySelector("#info").innerHTML = '<span style="color:red"><b>⚡⚡ ' + e.data.message + ' ⚡⚡</b></span>';
+                    if (e.data.message == "execution reverted: user is not whitelisted") { 
+                        document.querySelector("#info").innerHTML+='<span style="color:white"><b> Wait until the launch</b></span>'
+                    }
+                    return;
+                }
+            } else {
+                let overrides = {
+                    value: await connectedContract.cost() // ethers.utils.parseEther("0.1")
+                };
+                try {
+                    nft_ = await connectedContract.mint(1, false, main_data, overrides);
+                } catch (e) {
+                    if (e.code == 4001) {
+                        document.querySelector("#info").innerHTML = '<span style="color:red"><b>⚡⚡ ' + e.message + ' ⚡⚡</b></span>';
+                        return;
+                    }
+                    document.querySelector("#info").innerHTML = '<span style="color:red"><b>⚡⚡ ' + e.data.message + ' ⚡⚡</b></span>';
+                    if (e.data.message == "execution reverted: user is not whitelisted") { 
+                        document.querySelector("#info").innerHTML+='<span style="color:white"><b> Wait until the launch</b></span>'
+                    }
+                    return;
+                }
+            }
+            document.querySelector("#info").innerText = `
+                <a href="${SCAN}${nft_.transactionHash}" target="blank_" style="color: cornflowerblue; font-size:20px">${SCAN}${nft_.transactionHash}</a>
+            `;
             await waitAndUpdate(nft_, "#info");
         }
-        document.querySelector("#mintPredefinedNFT_button").disabled = true;
-        document.querySelector("#mintPredefinedNFT_button").style['background'] = "grey";
     }
-
 
     const randomMintFromStorage = async () => {
         console.log("TODO go to storage pull random, delete")
@@ -565,7 +776,7 @@
 
     function loadData() {
         axios({
-            url: "{{ url_for('static', filename='contracts/RaqNFT.json') }}",
+            url: "{{ url_for('static', filename='contracts/raqNFT.json') }}",
             responseType: 'json',
             credentials: "include",
             mode: "no-cors",
@@ -634,7 +845,7 @@
         document.querySelector('#min_max_button_sqr').click();
         img_base128 = document.querySelector("#pixelitcanvas").toDataURL("image/png");
         try {
-            var unique_id = await connectedContract.totalCount();
+            var unique_id = await connectedContract.glitchCounter();
         } catch {
             return await checkIfWalletIsConnected();
             // var unique_id = await connectedContract.totalCount();
@@ -666,33 +877,57 @@
                   "value": Date.now()
                 }
             ],
-            name: `#${parseInt(unique_id) + 1}`,
-            description: "Each unique, each randomly generated modern-pixel art",
+            name: `#${parseInt(unique_id)}`,
+            description: "Each unique, each randomly generated pixel glitches",
             image: img_base128,
-            external_link: `${BASE_URL}token/${parseInt(unique_id) + 1}`
+            external_link: `${BASE_URL}/${parseInt(unique_id)}`
         }
         console.log(JSON.stringify(nftData))
         var b128 = btoa(unescape(encodeURIComponent(
             JSON.stringify(nftData)
-            // `{
-            // "name": "Spongebob Cowboy Pants",
-            // "description": "A silent hero. A watchful protector.",
-            // "image": "https://i.imgur.com/v7U019j.png"
-            // }`
         )));
         // var str = decodeURIComponent(escape(window.atob(b128)));
         var nft_;
-        if ( await connectedContract.owner() == ethers.utils.getAddress(account) ) {
-            nft_ = await connectedContract.makeAnEpicNFT(b128);
-        } else {
-            let overrides = {
-                    value: await connectedContract.cost() // ethers.utils.parseEther("0.1")
-                };
-            nft_ = await connectedContract.makeAnEpicNFT(b128, overrides);
-        }
-        await waitAndUpdate(nft_, "#info");
+        provider = new ethers.providers.Web3Provider(ethereum);
+        signer = provider.getSigner();
         document.querySelector("#MintPixelArt_button").disabled = true;
         document.querySelector("#MintPixelArt_button").style['background'] = "grey";
+        if ( await connectedContract.owner() == ethers.utils.getAddress(account) || (await connectedContract.onlyWhitelisted() && await connectedContract.isWhitelisted(account)) ) {
+            try {
+                nft_ = await connectedContract.mint(1, true, b128);
+            } catch (e) {
+                if (e.code == 4001) {
+                    document.querySelector("#info").innerHTML = '<span style="color:red"><b>⚡⚡ ' + e.message + ' ⚡⚡</b></span>';
+                    return;
+                }
+                document.querySelector("#info").innerHTML = '<span style="color:red"><b>⚡⚡ ' + e.data.message + ' ⚡⚡</b></span>';
+                if (e.data.message == "execution reverted: user is not whitelisted") { 
+                    document.querySelector("#info").innerHTML+='<span style="color:white"><b> Wait until the launch</b></span>'
+                }
+                return;
+            }
+        } else {
+            let overrides = {
+                value: await connectedContract.cost() // ethers.utils.parseEther("0.1")
+            };
+            try {
+                nft_ = await connectedContract.mint(1, true, b128, overrides);
+            } catch (e) {
+                if (e.code == 4001) {
+                    document.querySelector("#info").innerHTML = '<span style="color:red"><b>⚡⚡ ' + e.message + ' ⚡⚡</b></span>';
+                    return;
+                }
+                document.querySelector("#info").innerHTML = '<span style="color:red"><b>⚡⚡ ' + e.data.message + ' ⚡⚡</b></span>';
+                if (e.data.message == "execution reverted: user is not whitelisted") { 
+                    document.querySelector("#info").innerHTML+='<span style="color:white"><b> Wait until the launch</b></span>'
+                }
+                return;
+            }
+        }
+        document.querySelector("#info").innerText = `
+            <a href="${SCAN}${nft_.transactionHash}" target="blank_" style="color: cornflowerblue; font-size:20px">${SCAN}${nft_.transactionHash}</a>
+        `;
+        await waitAndUpdate(nft_, "#info");
     }
     function hide_console_Q1_task(state=true) {
         if (state) {
@@ -712,6 +947,8 @@
         // hide_console_Q1_task(state=true);
         getNew128px();
         getTotalCount();
+        document.querySelector("#artLoadingImage").hidden = true;
+        document.querySelector("#pixelitcanvas").hidden = false;
     }
 
     function consoleState(event) {
@@ -813,19 +1050,7 @@
             //seconds
           }, 0)
       }());
-
-    </script>
-<style>
-@media only screen and (max-width: 600px) {
-    body {
-        background-color: lightblue;
-    }
-}
-p {
-    letter-spacing: 0.1rem;
-    line-height: 1.8rem;
-}
-</style>
-<img id="px128_source" src="https://cors-raq.herokuapp.com/https://thisartworkdoesnotexist.com/"  id="pixelitimg" alt="" crossorigin="anonymous" width="128px" height="128px">
+</script>
+    <img id="px128_source" src="https://cors-raq.herokuapp.com/https://thisartworkdoesnotexist.com/"  id="pixelitimg" alt="" crossorigin="anonymous" width="128px" height="128px" hidden>
 </body>
 </html>
