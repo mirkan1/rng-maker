@@ -18,6 +18,7 @@ def get_url():
 
 @application.route("/tokens/<topic>/<id>", methods = ['GET'])
 def raqNFT(topic, id):
+	return raq();
 	if topic == "raqNFT":
 		return render_template("tokens/raqNFT.html", id=id, topic=topic)
 	return "404"
