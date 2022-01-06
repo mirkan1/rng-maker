@@ -984,7 +984,7 @@
                 if (connectedContract) {
                     let totalCount = await connectedContract.totalCount()
                     let maxSupply = parseFloat(await connectedContract.maxSupply())
-                    document.querySelector("#totalTokenCount").innerHTML = `${totalCount}/${maxSupply} remeaning`
+                    document.querySelector("#totalTokenCount").innerHTML = `${totalCount}/${maxSupply} remaining`
                 } else {
                     alert(`you need to connect to the ${saleNetwork} network`)
                 }
