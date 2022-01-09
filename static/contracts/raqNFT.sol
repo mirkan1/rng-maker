@@ -30,6 +30,10 @@ contract raqNFT is ERC721URIStorage, Ownable {
     string memory _initNotRevealedUri,
     address[] memory _whitelist
   ) ERC721("raqNFT", "RAQ") {
+    require(_initNotRevealedUri != "", "_initNotRevealedUri not set!");
+    require(_whitelist != [], "_whitelist not set!");
+    // require(_rewardPerBlock != 0, "_rewardPerBlock not set!");
+    // require(_startBlock < _endBlock, "_startBlock too high!");
     notRevealedUri = string(abi.encodePacked(baseURI, _initNotRevealedUri));
     whitelistedAddresses = _whitelist;
     console.log(notRevealedUri);
